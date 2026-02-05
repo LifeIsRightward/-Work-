@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><meta charset="utf-8"/><title>KSTB2281 – Residual Vulnerability Assessment</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; background:#f9f9f9; font-size:10pt; }
+  .header { text-align:center; margin-bottom:12px; }
+  .header img { height:55px; }
+  h1 { color:#004a99; margin-top:6px; font-size:16pt; }
+  h2 { color:#333; margin-top:18px; font-size:11pt; }
+  table { border-collapse:collapse; width:94%; margin:6px auto; background:#fff;
+          box-shadow:0 1px 4px rgba(0,0,0,.08); }
+  th,td { border:1px solid #ccc; padding:4px 6px; text-align:center; vertical-align:top; }
+  th { background:#004a99; color:#fff; text-transform:uppercase; font-size:9pt; }
+  tr:nth-child(even) td { background:#f6f6f6; }
+  .status-critical { color:red; font-weight:bold; }
+  .status-high { color:orange; font-weight:bold; }
+  .status-medium { color:#bf8b00; font-weight:bold; }
+  .status-low { color:green; font-weight:bold; }
+  .status-negligible { color:green; font-weight:bold; }
+  .summary { width:94%; margin:10px auto; text-align:center; }
+  a { color:#004a99; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  /* Readability + whitespace */
+  body { font-size: 13.5pt; margin: 16px; }
+  h1 { font-size: 22pt; margin: 6px 0 8px 0; }
+  table { margin: 12px 0; }
+  th, td { padding: 6px 8px; }
+  th { font-size: 12pt; }
+  td { font-size: 12.5pt; }
+  .meta { font-size: 10.5pt; margin-top: 4px; }
+  .header { margin-bottom: 8px; }
+  .status-unknown { color: #455a64; font-weight: 700; }
+
+    body { font-size: 14pt; }
+    h1 { font-size: 26pt; }
+    h2 { font-size: 18pt; }
+    h3 { font-size: 16pt; }
+    th, td { font-size: 13.5pt; padding: 10px; }
+    table { width: 98%; }
+    
+    body { margin: 8px; font-size: 13pt; }
+    .header { margin-bottom: 4px; }
+    h1 { margin: 4px 0 6px 0; }
+    h2, h3 { margin: 8px 0 4px 0; }
+    table { margin: 6px auto; }
+    th, td { padding: 6px 8px; }
+    
+    /* Reduce spacing in the Rationale for Acceptance column */
+    th:nth-child(4), td:nth-child(4) {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        line-height: 1.2em;
+    }
+    
+    /* Give more width to the Rationale column to reduce wrapping */
+    table { table-layout: fixed; width: 98%; }
+    /* Column widths for the first table */
+    table:nth-of-type(1) colgroup col:nth-child(1) { width: 12%; }
+    table:nth-of-type(1) colgroup col:nth-child(2) { width: 14%; }
+    table:nth-of-type(1) colgroup col:nth-child(3) { width: 10%; }
+    table:nth-of-type(1) colgroup col:nth-child(4) { width: 54%; }
+    table:nth-of-type(1) colgroup col:nth-child(5) { width: 10%; }
+
+    /* Fallback if no colgroup exists: use nth-child on cells */
+    table:nth-of-type(1) th:nth-child(1), table:nth-of-type(1) td:nth-child(1) { width: 12%; }
+    table:nth-of-type(1) th:nth-child(2), table:nth-of-type(1) td:nth-child(2) { width: 14%; }
+    table:nth-of-type(1) th:nth-child(3), table:nth-of-type(1) td:nth-child(3) { width: 10%; }
+    table:nth-of-type(1) th:nth-child(4), table:nth-of-type(1) td:nth-child(4) { width: 54%; }
+    table:nth-of-type(1) th:nth-child(5), table:nth-of-type(1) td:nth-child(5) { width: 10%; }
+
+    /* Make rationale column denser */
+    table:nth-of-type(1) td:nth-child(4) {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        line-height: 1.15;
+        font-size: 12.25pt;
+    }
+    /* Slightly reduce general cell padding to shrink vertical space */
+    th, td { padding: 4px 6px; }
+    /* Headings and paragraph spacing tighter */
+    h1 { margin: 2px 0 4px 0; }
+    h2, h3 { margin: 6px 0 4px 0; }
+    p.summary { margin: 2px 0 4px 0; font-size: 12pt; }
+
+    /* NVD links table also compact */
+    table:nth-of-type(2) th, table:nth-of-type(2) td { padding: 4px 6px; line-height: 1.2; }
+    /* Summary table compact */
+    table:nth-of-type(3) th, table:nth-of-type(3) td { padding: 4px 6px; line-height: 1.2; }
+    </style></head>
+<body>
+<div class="header"><img alt="Eurofins Logo" src="https://cdnmedia.eurofins.com/corporate-eurofins/media/1004/logo.png"/><h1>KSTB2281 – Residual Vulnerability Assessment</h1></div>
+<p class="summary">Click a CVE ID to open its detail page on the National Vulnerability Database (NVD).</p>
+<h2>Accepted-Risk Vulnerabilities – Detail</h2>
+<table><colgroup><col/><col/><col/><col/><col/></colgroup><thead><tr>
+<th>Component</th><th>CVE (NVD)</th><th>NVD Severity</th><th>Description & Patch Information</th><th>Residual Risk</th>
+</tr></thead><tbody>
+<tr><td>Storage</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0032" target="_blank">CVE-2024-0032</a></td><td class="status-medium">MEDIUM</td><td>Restrict access for specific directories and subdirectories in shared storage. Fixed in March 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>System</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0074" target="_blank">CVE-2025-0074</a></td><td class="status-medium">MEDIUM</td><td>Use local variables to avoid using the reference. Fixed in March 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0084" target="_blank">CVE-2025-0084</a></td><td class="status-medium">MEDIUM</td><td>Check during discovery whether the database has already been allocated. Fixed in March 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-22403" target="_blank">CVE-2025-22403</a></td><td class="status-low">LOW</td><td>Store the length before the function call. Fixed in March 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-46852" target="_blank">CVE-2024-46852</a></td><td class="status-low">LOW</td><td>Correct the existing bounds check. Fixed in March 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0082" target="_blank">CVE-2025-0082</a></td><td class="status-medium">MEDIUM</td><td>Validate that images belong to the calling user. Fixed in March 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>System</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0092" target="_blank">CVE-2025-0092</a></td><td class="status-medium">MEDIUM</td><td>Remove permissions when the device is unbonded. Fixed in March 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49721" target="_blank">CVE-2024-49721</a></td><td class="status-medium">MEDIUM</td><td>Prevent negative count injection. Fixed in February 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49743" target="_blank">CVE-2024-49743</a></td><td class="status-medium">MEDIUM</td><td>Ensure the notification service has the correct token. Fixed in February 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0097" target="_blank">CVE-2025-0097</a></td><td class="status-medium">MEDIUM</td><td>Validate the originating process. Fixed in February 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-40122" target="_blank">CVE-2023-40122</a></td><td class="status-high">HIGH</td><td>Verify that the user has permission to view the URL. Fixed in February 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>System</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0094" target="_blank">CVE-2025-0094</a></td><td class="status-medium">MEDIUM</td><td>Prevent the User Settings overflow menu from appearing when interacting with a profile. Fixed in February 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0091" target="_blank">CVE-2025-0091</a></td><td class="status-medium">MEDIUM</td><td>Implement an additional check against unsafe intent types. Fixed in February 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>System</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49729" target="_blank">CVE-2024-49729</a></td><td class="status-medium">MEDIUM</td><td>Redact keys from dm-crypt targets. Fixed in February 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49724" target="_blank">CVE-2024-49724</a></td><td class="status-medium">MEDIUM</td><td>Explicitly set the component after checking the activity and to later check the subclass. Fixed in January 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49735" target="_blank">CVE-2024-49735</a></td><td class="status-low">LOW</td><td>Truncate fields that are too long. Fixed in January 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49744" target="_blank">CVE-2024-49744</a></td><td class="status-medium">MEDIUM</td><td>Set the component and update the subclass check. Fixed in January 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>System</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34722" target="_blank">CVE-2024-34722</a></td><td class="status-medium">MEDIUM</td><td>Change the order of device to peer confirmation. Fixed in January 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>Framework</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34730" target="_blank">CVE-2024-34730</a></td><td class="status-medium">MEDIUM</td><td>Disallow unexpected returning HID connections. Fixed in January 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+<tr><td>System</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49736" target="_blank">CVE-2024-49736</a></td><td class="status-medium">MEDIUM</td><td>Prevent a GSI from triggering factory reset. Fixed in January 2025 patch.</td><td class="status-negligible">Negligible</td></tr>
+</tbody></table>
+<h3 style="text-align:center; margin-top:24px;">NVD Reference Links</h3>
+<table><thead><tr><th>CVE</th><th>Complete NVD URL</th></tr></thead><tbody>
+<tr><td>CVE-2024-0032</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-0032" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-0032</a></td></tr>
+<tr><td>CVE-2025-0074</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0074" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-0074</a></td></tr>
+<tr><td>CVE-2025-0084</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0084" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-0084</a></td></tr>
+<tr><td>CVE-2025-22403</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-22403" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-22403</a></td></tr>
+<tr><td>CVE-2024-46852</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-46852" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-46852</a></td></tr>
+<tr><td>CVE-2025-0082</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0082" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-0082</a></td></tr>
+<tr><td>CVE-2025-0092</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0092" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-0092</a></td></tr>
+<tr><td>CVE-2024-49721</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49721" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-49721</a></td></tr>
+<tr><td>CVE-2024-49743</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49743" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-49743</a></td></tr>
+<tr><td>CVE-2025-0097</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0097" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-0097</a></td></tr>
+<tr><td>CVE-2023-40122</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-40122" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2023-40122</a></td></tr>
+<tr><td>CVE-2025-0094</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0094" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-0094</a></td></tr>
+<tr><td>CVE-2025-0091</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-0091" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-0091</a></td></tr>
+<tr><td>CVE-2024-49729</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49729" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-49729</a></td></tr>
+<tr><td>CVE-2024-49724</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49724" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-49724</a></td></tr>
+<tr><td>CVE-2024-49735</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49735" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-49735</a></td></tr>
+<tr><td>CVE-2024-49744</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49744" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-49744</a></td></tr>
+<tr><td>CVE-2024-34722</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34722" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-34722</a></td></tr>
+<tr><td>CVE-2024-34730</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34730" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-34730</a></td></tr>
+<tr><td>CVE-2024-49736</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49736" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-49736</a></td></tr>
+</tbody></table>
+<h2>Residual Risk Classification – Summary</h2>
+<table><thead><tr><th>Severity (Original)</th><th>Total Count</th><th>Risk Handling</th><th>Residual Risk(Home)</th></tr></thead>
+<tbody>
+<tr><td class="status-critical">CRITICAL</td><td>0</td><td>N/A</td><td>N/A</td></tr>
+<tr><td class="status-high">HIGH</td><td>1</td><td>Patched</td><td class="status-negligible">Negligible</td></tr>
+<tr><td class="status-medium">MEDIUM</td><td>17</td><td>Patched</td><td class="status-negligible">Negligible</td></tr>
+<tr><td class="status-low">LOW</td><td>2</td><td>Patched</td><td class="status-negligible">Negligible</td></tr>
+<tr><td class="status-unknown">UNKNOWN</td><td>0</td><td>N/A</td><td>N/A</td></tr>
+</tbody></table>
+<div class="summary">
+<p><strong>Total CVEs Assessed:</strong> 20 | <strong>Accepted CVEs:</strong> 20</p>
+<p>All identified vulnerabilities have been addressed through vendor security patches released between January 2025 and March 2025. The device firmware has been updated with the latest security patches, eliminating residual risk for all listed CVEs. Regular security patch updates should be maintained to ensure continued protection against newly discovered vulnerabilities.</p>
+</div>
+</body></html>

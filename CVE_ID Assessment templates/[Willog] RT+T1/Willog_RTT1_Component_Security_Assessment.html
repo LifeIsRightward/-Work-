@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><meta charset="utf-8"/><title>Willog RT-T1 – Component Security Assessment</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; background:#f9f9f9; font-size:10pt; }
+  .header { text-align:center; margin-bottom:12px; }
+  .header img { height:55px; }
+  h1 { color:#004a99; margin-top:6px; font-size:16pt; }
+  h2 { color:#333; margin-top:18px; font-size:11pt; }
+  h3 { color:#333; margin-top:14px; font-size:10pt; }
+  table { border-collapse:collapse; width:94%; margin:6px auto; background:#fff;
+          box-shadow:0 1px 4px rgba(0,0,0,.08); }
+  th,td { border:1px solid #ccc; padding:4px 6px; text-align:center; vertical-align:top; }
+  th { background:#004a99; color:#fff; text-transform:uppercase; font-size:9pt; }
+  tr:nth-child(even) td { background:#f6f6f6; }
+  .status-critical { color:red; font-weight:bold; }
+  .status-high { color:orange; font-weight:bold; }
+  .status-medium { color:#bf8b00; font-weight:bold; }
+  .status-low { color:green; font-weight:bold; }
+  .status-safe { color:#0066cc; font-weight:bold; }
+  .status-na { color:#666; font-weight:bold; }
+  .status-accepted { color:green; font-weight:bold; }
+  .summary { width:94%; margin:10px auto; text-align:center; }
+  a { color:#004a99; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  /* Readability + whitespace */
+  body { font-size: 13.5pt; margin: 16px; }
+  h1 { font-size: 22pt; margin: 6px 0 8px 0; }
+  table { margin: 12px 0; }
+  th, td { padding: 6px 8px; }
+  th { font-size: 12pt; }
+  td { font-size: 12.5pt; }
+  .meta { font-size: 10.5pt; margin-top: 4px; }
+  .header { margin-bottom: 8px; }
+
+    body { font-size: 14pt; }
+    h1 { font-size: 26pt; }
+    h2 { font-size: 18pt; }
+    h3 { font-size: 16pt; }
+    th, td { font-size: 13.5pt; padding: 10px; }
+    table { width: 98%; }
+    
+    body { margin: 8px; font-size: 13pt; }
+    .header { margin-bottom: 4px; }
+    h1 { margin: 4px 0 6px 0; }
+    h2, h3 { margin: 8px 0 4px 0; }
+    table { margin: 6px auto; }
+    th, td { padding: 6px 8px; }
+    
+    /* Reduce spacing in description column */
+    th:nth-child(4), td:nth-child(4) {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        line-height: 1.2em;
+    }
+    
+    /* Give more width to description column */
+    table { table-layout: fixed; width: 98%; }
+    /* Column widths for component table */
+    table:nth-of-type(1) colgroup col:nth-child(1) { width: 18%; }
+    table:nth-of-type(1) colgroup col:nth-child(2) { width: 10%; }
+    table:nth-of-type(1) colgroup col:nth-child(3) { width: 12%; }
+    table:nth-of-type(1) colgroup col:nth-child(4) { width: 45%; }
+    table:nth-of-type(1) colgroup col:nth-child(5) { width: 15%; }
+
+    /* Make description column denser */
+    table:nth-of-type(1) td:nth-child(4) {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        line-height: 1.15;
+        font-size: 12.25pt;
+    }
+    /* Slightly reduce general cell padding */
+    th, td { padding: 4px 6px; }
+    /* Headings and paragraph spacing tighter */
+    h1 { margin: 2px 0 4px 0; }
+    h2, h3 { margin: 6px 0 4px 0; }
+    p.summary { margin: 2px 0 4px 0; font-size: 12pt; }
+
+    /* Other tables compact */
+    table:nth-of-type(2) th, table:nth-of-type(2) td { padding: 4px 6px; line-height: 1.2; }
+    </style></head>
+<body>
+<div class="header"><img alt="Eurofins Logo" src="https://cdnmedia.eurofins.com/corporate-eurofins/media/1004/logo.png"/><h1>RT-T1 – Residual Vulnerability Assessment</h1></div>
+<p class="summary">Component-based security assessment for software and hardware components.<br/>Each component is evaluated for known vulnerabilities and security posture.</p>
+
+<h2>Component Security Assessment – Detail</h2>
+<table><colgroup><col/><col/><col/><col/><col/></colgroup><thead><tr>
+<th>Component</th><th>Type</th><th>Security Status</th><th>Description & Mitigation</th><th>Risk Assessment</th>
+</tr></thead><tbody>
+<tr><td>Nordic_Secure_Bootloader<br/>(nRF5 SDK 17.1.0, ddde500)</td><td>Software</td><td class="status-safe">No Vulnerability</td><td>No known publicly exploitable vulnerability for Nordic Secure Bootloader (nRF52840 version: nRF5 SDK 17.1.0). <strong>SpecificCondition:</strong> nRF52840 executes code only from secure boot path; no unsigned firmware allowed.</td><td class="status-accepted">Negligible</td></tr>
+<tr><td>FreeRTOS_Kernel<br/>(RTOS SDK 17.1.0, ddde500)</td><td>Software</td><td class="status-safe">No Vulnerability</td><td>Historical FreeRTOS vulnerability (CVE-2018-16524) for older TCP/IP stack versions. Not applicable to Nordic FreeRTOS because it is not used in MCU (only used in modem). <strong>SpecificCondition:</strong> MCU firmware does not use FreeRTOS TCP/IP stack. <strong>Mitigation:</strong> FreeRTOS tasks are restricted to stack, scheduling, and internal control.</td><td class="status-accepted">Negligible</td></tr>
+<tr><td>Quectel_BG95-M5_Firmware</td><td>Software</td><td class="status-safe">No Vulnerability</td><td>Hivokom modem TLS validation issue reported for certain Quectel modems (e.g., CVE-2022-29410). Vendor patch applied in BG95-M5 firmware version used in RT-T1 (latest carrier). <strong>SpecificCondition:</strong> Only modem handles TLS; MCU cannot bypass checks. <strong>Mitigation:</strong> TLS certificate validation handled strictly by modem firmware.</td><td class="status-accepted">Negligible</td></tr>
+<tr><td>nRF52840_MCU</td><td>Hardware</td><td class="status-safe">No Vulnerability</td><td>No known publicly exploitable vulnerabilities affecting the nRF52840 MCU. <strong>SpecificCondition:</strong> Sorbed over BLE stack not used in operational mode; BLE disabled permanently.</td><td class="status-accepted">Negligible</td></tr>
+<tr><td>Quectel_BG95-M5_Modem</td><td>Hardware</td><td class="status-low">Accepted Risk</td><td>Potential SMS-based AT command remote attack vectors reported in older modems: SMS-based AT-Cmd is disabled (not RT-T1 uses LTE-M data only; SMS strictly disabled). <strong>SpecificCondition:</strong> RT-T1 uses LTE-M data only; SMS strictly disabled. <strong>Mitigation:</strong> AT interface protected by hidden physical activation button.</td><td class="status-low">Low</td></tr>
+<tr><td>Physical_Buttons</td><td>Hardware</td><td class="status-low">Accepted Risk</td><td>Physical access could allow an attacker to attempt CLI activation. <strong>SpecificCondition:</strong> Requires physical device access. Hidden location combined with prevents accidental activation. <strong>Mitigation:</strong> CLI requires password after activation.</td><td class="status-low">Low</td></tr>
+</tbody></table>
+
+<h2>Component Security Status – Summary</h2>
+<table><thead><tr><th>Component Type</th><th>Total Count</th><th>No Vulnerability</th><th>Accepted Risk</th><th>Overall Risk Level</th></tr></thead>
+<tbody>
+<tr><td>Software</td><td>3</td><td>3</td><td>0</td><td class="status-accepted">Negligible</td></tr>
+<tr><td>Hardware</td><td>3</td><td>1</td><td>2</td><td class="status-low">Low</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>6</strong></td><td><strong>4</strong></td><td><strong>2</strong></td><td class="status-low">Low</td></tr>
+</tbody></table>
+
+<h2>Risk Classification – Summary</h2>
+<table><thead><tr><th>Security Status</th><th>Software Components</th><th>Hardware Components</th><th>Total</th><th>Risk Assessment</th></tr></thead>
+<tbody>
+<tr><td class="status-safe">No Vulnerability</td><td>3</td><td>1</td><td>4</td><td class="status-accepted">Negligible</td></tr>
+<tr><td class="status-low">Accepted Risk</td><td>0</td><td>2</td><td>2</td><td class="status-low">Low</td></tr>
+</tbody></table>
+
+<div class="summary">
+<p><strong>Total Components Assessed:</strong> 6 (3 Software, 3 Hardware)</p>
+<p><strong>Security Status Summary:</strong> 4 components with no vulnerabilities, 2 components with accepted low risk</p>
+</div>
+</body></html>
