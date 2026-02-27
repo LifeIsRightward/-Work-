@@ -1,0 +1,35 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.02.03 14:51:59 =~=~=~=~=~=~=~=~=~=~=~=
+TR-069: Delayed Client Start
+Selecting HTTP protocol for software upgrade
+Set String : admin
+Set String : test
+Starting software update...
+Logging event: SW Download INIT - Via NMS
+
+CM> Trying to create a buffer of 65544 bytes (64k) to store the image...
+Done!  Actually allocated 65544 bytes.
+Connecting to HTTP server 172.31.255.20:80
+Brad 2021-02-23
+
+Brad 2021-02-23
+
+errno = 11
+
+CM> Success; 200 OK found in response
+Content Length: 47057843
+Entering SecureDownloadTftpHelper() :  0
+[14:52:15 02/03/2026] [CmDocsisIpThread] BcmBfcHttpFileDownloadHelper::Small readBuffer, need to iterate more:  (BcmBfcHttpFileDownloadHelper) 
+fTotalBytesReceived : 2
+SecureSoftwareDownloadStarted :  2
+[14:52:15 02/03/2026] [CmDocsisIpThread] BcmBfcCmD31SecureDownload::SecureDownloadTftpHelper:  (D31 Secure Software Download) ERROR - Invalid Start of PKCS Data.
+Secure Download Header size: 2 (Loaded, but not Stored)
+D31CVC is installed. Will try D31 secure download
+[14:52:15 02/03/2026] [CmDocsisIpThread] BcmBfcHttpFileDownloadHelper::Small readBuffer, need to iterate more:  (BcmBfcHttpFileDownloadHelper) 
+fTotalBytesReceived : 4
+[14:52:15 02/03/2026] [CmDocsisIpThread] BcmBfcCmD31SecureDownload::VendorDefinedDownloadTftpHelper:  (D31 Secure Software Download) [BcmBfcCmD31SecureDownload]Secure Download started...
+[14:52:15 02/03/2026] [CmDocsisIpThread] BcmBfcCmD31SecureDownload::VendorDefinedDownloadTftpHelper:  (D31 Secure Software Download) ERROR - Invalid Start of Vendor-Defined Data.
+
+Logging event: SW upgrade Failed after download - SW File corruption
+Logging event: SW upgrade Failed after download - SW File corruption
+
+CM> 

@@ -1,0 +1,5918 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.01.23 13:08:21 =~=~=~=~=~=~=~=~=~=~=~=
+
+CM> 
+CM> 
+CM> 
+CM> 
+CM> 
+CM> 
+CM> 
+CM> TR-069: Delayed Client Start
+Selecting HTTP protocol for software upgrade
+Set String : admin
+Set String : admin
+Starting software update...
+Logging event: SW Download INIT - Via NMS
+
+CM> Trying to create a buffer of 65544 bytes (64k) to store the image...
+Done!  Actually allocated 65544 bytes.
+Connecting to HTTP server 172.31.255.20:80
+Brad 2021-02-23
+
+Brad 2021-02-23
+
+errno = 11
+
+CM> Success; 200 OK found in response
+Content Length: 47057843
+Entering SecureDownloadTftpHelper() :  0
+[13:08:39 01/23/2026] [CmDocsisIpThread] BcmBfcHttpFileDownloadHelper::Small readBuffer, need to iterate more:  (BcmBfcHttpFileDownloadHelper) 
+fTotalBytesReceived : 2
+SecureSoftwareDownloadStarted :  2
+[13:08:39 01/23/2026] [CmDocsisIpThread] BcmBfcHttpFileDownloadHelper::Small readBuffer, need to iterate more:  (BcmBfcHttpFileDownloadHelper) 
+fTotalBytesReceived : 4
+Get the size of the PKCS header :  4
+Validate the Header :  2935
+Certificate Header Offset - offset(+4): 56
+mfgCVCHeader - offset(+4): 60
+mfgCVC-CAHeader - offset(+4): 1074
+
+signedDataValueHeader (off:len) = (19:2916)
+signedDataHeader      (off:len) = (23:2912)
+certificateHeader     (off:len) = (56:2356)
+mfgCvcHeader          (off:len) = (60:1010)
+mfgCvcCaHeader        (off:len) = (1074:1338)
+ParseSoftwareDownloadHeader:Code file manufacturer CVC & CVC-CA validated.
+SET of SignerInfo Header - offset(+4): 2416
+MfgSignerInfoHeader - offset(+4): 2420
+digestEncryptionAlgorithm header - offset(+4): 2660
+encryptedDigest header - offset(+4): 2675
+encrypted256Digest offset - offset(+4): 2679
+ParseSoftwareDownloadHeader:Code file manufacturer SignerInfo is validated.
+SignedContent - offset(+4): 2935
+kCertHeaderSize'd buffer = 1c 00 00  | ...
+
+First should check first byte for validity of certificate :  2938
+secureSize8 at offset 0 = 1c
+secureSize16 (rest of header) = 0
+Secure Download Header size: 2938 (Loaded, but not Stored)
+D31CVC is installed. Will try D31 secure download
+[13:08:39 01/23/2026] [CmDocsisIpThread] BcmBfcCmD31SecureDownload::VendorDefinedDownloadTftpHelper:  (D31 Secure Software Download) [BcmBfcCmD31SecureDownload]Secure Download started...
+allow 2nd digit
+CmDownloadCompareVersion - New Version!!! 
+srcbuf=41  cmpbuf=67  i=2
+
+							Loading from server...
+
+							Loaded 68531 bytes.
+
+Monolith Header
+==================
+ MagicNumber    : 0x4d4f4e4f
+ MajorVersion   : 0x3390
+ MinorVersion   : 0x10
+ CombinedLength : 0x2ce0000
+ ImagesBitMask  : 0x28c
+
+Monolithic image detected...
+Board is not manufactured.
+Bypassing image control check.
+Combined ProgramStore header was verified.  Image can be downloaded.
+Image index = 3 Image to open = 3
+   Signature: 3390
+     Control: 0000
+   Major Rev: 0000
+   Minor Rev: 0000
+ File Length: 5024270 bytes
+Load Address: 00000000
+    Filename: ubi-squashfs-128k-2048-3390b0-lattice-wifi-CM_v1.00.67.i
+         HCS: 1edd
+         CRC: 9990b265
+
+ProgramStoreDeviceDriverRemoteFlash::ProgramStoreDriverIsHeaderValid: Allowing alternate image signature 3390
+!ProgramStore header was verified.  Image can be downloaded.
+[13:08:39 01/23/2026] [CmDocsisIpThread] BcmRemoteProgramStoreDeviceDriverBridge::Open:  (BcmRemoteProgramStoreDeviceDriverBridge) 
+Opening the default image number (2).
+Opening the ProgramStore driver for image 2	isMonolithic = 1
+
+							Storing to device...
+
+CM> 
+							Stored 65536 bytes.
+
+							Loading from server...
+
+							Loaded 134067 bytes.
+
+							Storing to device...
+
+							Stored 131072 bytes.
+
+							Loading from server...
+
+							Loaded 199603 bytes.
+
+							Storing to device...
+
+							Stored 196608 bytes.
+
+							Loading from server...
+
+							Loaded 265139 bytes.
+
+							Storing to device...
+
+							Stored 262144 bytes.
+
+							Loading from server...
+
+							Loaded 330675 bytes.
+
+							Storing to device...
+
+							Stored 327680 bytes.
+
+							Loading from server...
+
+							Loaded 396211 bytes.
+
+							Storing to device...
+
+							Stored 393216 bytes.
+
+							Loading from server...
+
+							Loaded 461747 bytes.
+
+							Storing to device...
+
+							Stored 458752 bytes.
+
+							Loading from server...
+
+							Loaded 527283 bytes.
+
+							Storing to device...
+
+							Stored 524288 bytes.
+
+							Loading from server...
+
+							Loaded 592819 bytes.
+
+							Storing to device...
+
+							Stored 589824 bytes.
+
+							Loading from server...
+
+							Loaded 658355 bytes.
+
+							Storing to device...
+
+							Stored 655360 bytes.
+
+							Loading from server...
+
+							Loaded 723891 bytes.
+
+							Storing to device...
+
+							Stored 720896 bytes.
+
+							Loading from server...
+
+							Loaded 789427 bytes.
+
+							Storing to device...
+
+							Stored 786432 bytes.
+
+							Loading from server...
+
+							Loaded 854963 bytes.
+
+							Storing to device...
+
+							Stored 851968 bytes.
+
+							Loading from server...
+
+							Loaded 920499 bytes.
+
+							Storing to device...
+
+							Stored 917504 bytes.
+
+							Loading from server...
+
+							Loaded 986035 bytes.
+
+							Storing to device...
+
+							Stored 983040 bytes.
+
+							Loading from server...
+
+							Loaded 1051571 bytes.
+
+							Storing to device...
+
+							Stored 1048576 bytes.
+
+							Loading from server...
+
+							Loaded 1117107 bytes.
+
+							Storing to device...
+
+							Stored 1114112 bytes.
+
+							Loading from server...
+
+							Loaded 1182643 bytes.
+
+							Storing to device...
+
+							Stored 1179648 bytes.
+
+							Loading from server...
+
+							Loaded 1248179 bytes.
+
+							Storing to device...
+
+							Stored 1245184 bytes.
+
+							Loading from server...
+
+							Loaded 1313715 bytes.
+
+							Storing to device...
+
+							Stored 1310720 bytes.
+
+							Loading from server...
+
+							Loaded 1379251 bytes.
+
+							Storing to device...
+
+							Stored 1376256 bytes.
+
+							Loading from server...
+
+							Loaded 1444787 bytes.
+
+							Storing to device...
+
+							Stored 1441792 bytes.
+
+							Loading from server...
+
+							Loaded 1510323 bytes.
+
+							Storing to device...
+
+							Stored 1507328 bytes.
+
+							Loading from server...
+
+							Loaded 1575859 bytes.
+
+							Storing to device...
+
+							Stored 1572864 bytes.
+
+							Loading from server...
+
+							Loaded 1641395 bytes.
+
+							Storing to device...
+
+							Stored 1638400 bytes.
+
+							Loading from server...
+
+							Loaded 1706931 bytes.
+
+							Storing to device...
+
+							Stored 1703936 bytes.
+
+							Loading from server...
+
+							Loaded 1772467 bytes.
+
+							Storing to device...
+
+							Stored 1769472 bytes.
+
+							Loading from server...
+
+							Loaded 1838003 bytes.
+
+							Storing to device...
+
+							Stored 1835008 bytes.
+
+							Loading from server...
+
+							Loaded 1903539 bytes.
+
+							Storing to device...
+
+							Stored 1900544 bytes.
+
+							Loading from server...
+
+							Loaded 1969075 bytes.
+
+							Storing to device...
+
+							Stored 1966080 bytes.
+
+							Loading from server...
+
+							Loaded 2034611 bytes.
+
+							Storing to device...
+
+							Stored 2031616 bytes.
+
+							Loading from server...
+
+							Loaded 2100147 bytes.
+
+							Storing to device...
+
+							Stored 2097152 bytes.
+
+							Loading from server...
+
+							Loaded 2165683 bytes.
+
+							Storing to device...
+
+							Stored 2162688 bytes.
+
+							Loading from server...
+
+							Loaded 2231219 bytes.
+
+							Storing to device...
+
+							Stored 2228224 bytes.
+
+							Loading from server...
+
+							Loaded 2296755 bytes.
+
+							Storing to device...
+
+							Stored 2293760 bytes.
+
+							Loading from server...
+
+							Loaded 2362291 bytes.
+
+							Storing to device...
+
+							Stored 2359296 bytes.
+
+							Loading from server...
+
+							Loaded 2427827 bytes.
+
+							Storing to device...
+
+							Stored 2424832 bytes.
+
+							Loading from server...
+
+							Loaded 2493363 bytes.
+
+							Storing to device...
+
+							Stored 2490368 bytes.
+
+							Loading from server...
+
+							Loaded 2558899 bytes.
+
+							Storing to device...
+
+							Stored 2555904 bytes.
+
+							Loading from server...
+
+							Loaded 2624435 bytes.
+
+							Storing to device...
+
+							Stored 2621440 bytes.
+
+							Loading from server...
+
+							Loaded 2689971 bytes.
+
+							Storing to device...
+
+							Stored 2686976 bytes.
+
+							Loading from server...
+
+							Loaded 2755507 bytes.
+
+							Storing to device...
+
+							Stored 2752512 bytes.
+
+							Loading from server...
+
+							Loaded 2821043 bytes.
+
+							Storing to device...
+
+							Stored 2818048 bytes.
+
+							Loading from server...
+
+							Loaded 2886579 bytes.
+
+							Storing to device...
+
+							Stored 2883584 bytes.
+
+							Loading from server...
+
+							Loaded 2952115 bytes.
+
+							Storing to device...
+
+							Stored 2949120 bytes.
+
+							Loading from server...
+
+							Loaded 3017651 bytes.
+
+							Storing to device...
+
+							Stored 3014656 bytes.
+
+							Loading from server...
+
+							Loaded 3083187 bytes.
+
+							Storing to device...
+
+							Stored 3080192 bytes.
+
+							Loading from server...
+
+							Loaded 3148723 bytes.
+
+							Storing to device...
+
+							Stored 3145728 bytes.
+
+							Loading from server...
+
+							Loaded 3214259 bytes.
+
+							Storing to device...
+
+							Stored 3211264 bytes.
+
+							Loading from server...
+
+							Loaded 3279795 bytes.
+
+							Storing to device...
+
+							Stored 3276800 bytes.
+
+							Loading from server...
+
+							Loaded 3345331 bytes.
+
+							Storing to device...
+
+							Stored 3342336 bytes.
+
+							Loading from server...
+
+							Loaded 3410867 bytes.
+
+							Storing to device...
+
+							Stored 3407872 bytes.
+
+							Loading from server...
+
+							Loaded 3476403 bytes.
+
+							Storing to device...
+
+							Stored 3473408 bytes.
+
+							Loading from server...
+
+							Loaded 3541939 bytes.
+
+							Storing to device...
+
+							Stored 3538944 bytes.
+
+							Loading from server...
+
+							Loaded 3607475 bytes.
+
+							Storing to device...
+
+							Stored 3604480 bytes.
+
+							Loading from server...
+
+							Loaded 3673011 bytes.
+
+							Storing to device...
+
+							Stored 3670016 bytes.
+
+							Loading from server...
+
+							Loaded 3738547 bytes.
+
+							Storing to device...
+
+							Stored 3735552 bytes.
+
+							Loading from server...
+
+							Loaded 3804083 bytes.
+
+							Storing to device...
+
+							Stored 3801088 bytes.
+
+							Loading from server...
+
+							Loaded 3869619 bytes.
+
+							Storing to device...
+
+							Stored 3866624 bytes.
+
+							Loading from server...
+
+							Loaded 3935155 bytes.
+
+							Storing to device...
+
+							Stored 3932160 bytes.
+
+							Loading from server...
+
+							Loaded 4000691 bytes.
+
+							Storing to device...
+
+							Stored 3997696 bytes.
+
+							Loading from server...
+
+							Loaded 4066227 bytes.
+
+							Storing to device...
+
+							Stored 4063232 bytes.
+
+							Loading from server...
+
+							Loaded 4131763 bytes.
+
+							Storing to device...
+
+							Stored 4128768 bytes.
+
+							Loading from server...
+
+							Loaded 4197299 bytes.
+
+							Storing to device...
+
+							Stored 4194304 bytes.
+
+							Loading from server...
+
+							Loaded 4262835 bytes.
+
+							Storing to device...
+
+							Stored 4259840 bytes.
+
+							Loading from server...
+
+							Loaded 4328371 bytes.
+
+							Storing to device...
+
+							Stored 4325376 bytes.
+
+							Loading from server...
+
+							Loaded 4393907 bytes.
+
+							Storing to device...
+
+							Stored 4390912 bytes.
+
+							Loading from server...
+
+							Loaded 4459443 bytes.
+
+							Storing to device...
+
+							Stored 4456448 bytes.
+
+							Loading from server...
+
+							Loaded 4524979 bytes.
+
+							Storing to device...
+
+							Stored 4521984 bytes.
+
+							Loading from server...
+
+							Loaded 4590515 bytes.
+
+							Storing to device...
+
+							Stored 4587520 bytes.
+
+							Loading from server...
+
+							Loaded 4656051 bytes.
+
+							Storing to device...
+
+							Stored 4653056 bytes.
+
+							Loading from server...
+
+							Loaded 4721587 bytes.
+
+							Storing to device...
+
+							Stored 4718592 bytes.
+
+							Loading from server...
+
+							Loaded 4787123 bytes.
+
+							Storing to device...
+
+							Stored 4784128 bytes.
+
+							Loading from server...
+
+							Loaded 4852659 bytes.
+
+							Storing to device...
+
+							Stored 4849664 bytes.
+
+							Loading from server...
+
+							Loaded 4918195 bytes.
+
+							Storing to device...
+
+							Stored 4915200 bytes.
+
+							Loading from server...
+
+							Loaded 4983731 bytes.
+
+							Storing to device...
+
+							Stored 4980736 bytes.
+
+							Loading from server...
+TR-069: Client Start
+TR-069: UpdateDnsResolver
+TR-069: Initializing Configuration info...
+TR-069: No DHCPv4 Option 125 - 3561(TR-069) in lease
+TR-069: Configuration parameters not initialized.
+TR-069: Shutting down TR-069 Client.
+CoreShutdown: TR-069 core is stopped.
+
+TR-069 RetryInitialProvisioning has exceeded max retries(3). Discontinuing retries, TR-069 client not started
+
+
+							Loaded 5049267 bytes.
+Image parsing complete.
+
+							Storing to device...
+
+CM> 
+							Stored 5046272 bytes.
+
+							Loading from server...
+
+							Loaded 5114803 bytes.
+Image index = 4 Image to open = 4
+   Signature: 3390
+     Control: 0000
+   Major Rev: 0000
+   Minor Rev: 0000
+ File Length: 38397789 bytes
+Load Address: 00000000
+    Filename: root_v1.00.67.3390
+         HCS: 7e19
+         CRC: 06fab56d
+
+ProgramStoreDeviceDriverRemoteFlash::ProgramStoreDriverIsHeaderValid: Allowing alternate image signature 3390
+!ProgramStore header was verified.  Image can be downloaded.
+
+							Storing to device...
+
+CM> 
+							Stored 5111808 bytes.
+
+							Loading from server...
+
+							Loaded 5180339 bytes.
+
+							Storing to device...
+
+							Stored 5177344 bytes.
+
+							Loading from server...
+
+							Loaded 5245875 bytes.
+
+							Storing to device...
+
+							Stored 5242880 bytes.
+
+							Loading from server...
+
+							Loaded 5311411 bytes.
+
+							Storing to device...
+
+							Stored 5308416 bytes.
+
+							Loading from server...
+
+							Loaded 5376947 bytes.
+
+							Storing to device...
+
+							Stored 5373952 bytes.
+
+							Loading from server...
+
+							Loaded 5442483 bytes.
+
+							Storing to device...
+
+							Stored 5439488 bytes.
+
+							Loading from server...
+
+							Loaded 5508019 bytes.
+
+							Storing to device...
+
+							Stored 5505024 bytes.
+
+							Loading from server...
+
+							Loaded 5573555 bytes.
+
+							Storing to device...
+
+							Stored 5570560 bytes.
+
+							Loading from server...
+
+							Loaded 5639091 bytes.
+
+							Storing to device...
+
+							Stored 5636096 bytes.
+
+							Loading from server...
+
+							Loaded 5704627 bytes.
+
+							Storing to device...
+
+							Stored 5701632 bytes.
+
+							Loading from server...
+
+							Loaded 5770163 bytes.
+
+							Storing to device...
+
+							Stored 5767168 bytes.
+
+							Loading from server...
+
+							Loaded 5835699 bytes.
+
+							Storing to device...
+
+							Stored 5832704 bytes.
+
+							Loading from server...
+
+							Loaded 5901235 bytes.
+
+							Storing to device...
+
+							Stored 5898240 bytes.
+
+							Loading from server...
+
+							Loaded 5966771 bytes.
+
+							Storing to device...
+
+							Stored 5963776 bytes.
+
+							Loading from server...
+
+							Loaded 6032307 bytes.
+
+							Storing to device...
+
+							Stored 6029312 bytes.
+
+							Loading from server...
+
+							Loaded 6097843 bytes.
+
+							Storing to device...
+
+							Stored 6094848 bytes.
+
+							Loading from server...
+
+							Loaded 6163379 bytes.
+
+							Storing to device...
+
+							Stored 6160384 bytes.
+
+							Loading from server...
+
+							Loaded 6228915 bytes.
+
+							Storing to device...
+
+							Stored 6225920 bytes.
+
+							Loading from server...
+
+							Loaded 6294451 bytes.
+
+							Storing to device...
+
+							Stored 6291456 bytes.
+
+							Loading from server...
+
+							Loaded 6359987 bytes.
+
+							Storing to device...
+
+							Stored 6356992 bytes.
+
+							Loading from server...
+
+							Loaded 6425523 bytes.
+
+							Storing to device...
+
+							Stored 6422528 bytes.
+
+							Loading from server...
+
+							Loaded 6491059 bytes.
+
+							Storing to device...
+
+							Stored 6488064 bytes.
+
+							Loading from server...
+
+							Loaded 6556595 bytes.
+
+							Storing to device...
+
+							Stored 6553600 bytes.
+
+							Loading from server...
+
+							Loaded 6622131 bytes.
+
+							Storing to device...
+
+							Stored 6619136 bytes.
+
+							Loading from server...
+
+							Loaded 6687667 bytes.
+
+							Storing to device...
+
+							Stored 6684672 bytes.
+
+							Loading from server...
+
+							Loaded 6753203 bytes.
+
+							Storing to device...
+
+							Stored 6750208 bytes.
+
+							Loading from server...
+
+							Loaded 6818739 bytes.
+
+							Storing to device...
+
+							Stored 6815744 bytes.
+
+							Loading from server...
+
+							Loaded 6884275 bytes.
+
+							Storing to device...
+
+							Stored 6881280 bytes.
+
+							Loading from server...
+
+							Loaded 6949811 bytes.
+
+							Storing to device...
+
+							Stored 6946816 bytes.
+
+							Loading from server...
+
+							Loaded 7015347 bytes.
+
+							Storing to device...
+
+							Stored 7012352 bytes.
+
+							Loading from server...
+
+							Loaded 7080883 bytes.
+
+							Storing to device...
+
+							Stored 7077888 bytes.
+
+							Loading from server...
+
+							Loaded 7146419 bytes.
+
+							Storing to device...
+
+							Stored 7143424 bytes.
+
+							Loading from server...
+
+							Loaded 7211955 bytes.
+
+							Storing to device...
+
+							Stored 7208960 bytes.
+
+							Loading from server...
+
+							Loaded 7277491 bytes.
+
+							Storing to device...
+
+							Stored 7274496 bytes.
+
+							Loading from server...
+
+							Loaded 7343027 bytes.
+
+							Storing to device...
+
+							Stored 7340032 bytes.
+
+							Loading from server...
+
+							Loaded 7408563 bytes.
+
+							Storing to device...
+
+							Stored 7405568 bytes.
+
+							Loading from server...
+
+							Loaded 7474099 bytes.
+
+							Storing to device...
+
+							Stored 7471104 bytes.
+
+							Loading from server...
+
+							Loaded 7539635 bytes.
+
+							Storing to device...
+
+							Stored 7536640 bytes.
+
+							Loading from server...
+
+							Loaded 7605171 bytes.
+
+							Storing to device...
+
+							Stored 7602176 bytes.
+
+							Loading from server...
+
+							Loaded 7670707 bytes.
+
+							Storing to device...
+
+							Stored 7667712 bytes.
+
+							Loading from server...
+
+							Loaded 7736243 bytes.
+
+							Storing to device...
+
+							Stored 7733248 bytes.
+
+							Loading from server...
+
+							Loaded 7801779 bytes.
+
+							Storing to device...
+
+							Stored 7798784 bytes.
+
+							Loading from server...
+
+							Loaded 7867315 bytes.
+
+							Storing to device...
+
+							Stored 7864320 bytes.
+
+							Loading from server...
+
+							Loaded 7932851 bytes.
+
+							Storing to device...
+
+							Stored 7929856 bytes.
+
+							Loading from server...
+
+							Loaded 7998387 bytes.
+
+							Storing to device...
+
+							Stored 7995392 bytes.
+
+							Loading from server...
+
+							Loaded 8063923 bytes.
+
+							Storing to device...
+
+							Stored 8060928 bytes.
+
+							Loading from server...
+
+							Loaded 8129459 bytes.
+
+							Storing to device...
+
+							Stored 8126464 bytes.
+
+							Loading from server...
+
+							Loaded 8194995 bytes.
+
+							Storing to device...
+
+							Stored 8192000 bytes.
+
+							Loading from server...
+
+							Loaded 8260531 bytes.
+
+							Storing to device...
+
+							Stored 8257536 bytes.
+
+							Loading from server...
+
+							Loaded 8326067 bytes.
+
+							Storing to device...
+
+							Stored 8323072 bytes.
+
+							Loading from server...
+
+							Loaded 8391603 bytes.
+
+							Storing to device...
+
+							Stored 8388608 bytes.
+
+							Loading from server...
+
+							Loaded 8457139 bytes.
+
+							Storing to device...
+
+							Stored 8454144 bytes.
+
+							Loading from server...
+
+							Loaded 8522675 bytes.
+
+							Storing to device...
+
+							Stored 8519680 bytes.
+
+							Loading from server...
+
+							Loaded 8588211 bytes.
+
+							Storing to device...
+
+							Stored 8585216 bytes.
+
+							Loading from server...
+
+							Loaded 8653747 bytes.
+
+							Storing to device...
+
+							Stored 8650752 bytes.
+
+							Loading from server...
+
+							Loaded 8719283 bytes.
+
+							Storing to device...
+
+							Stored 8716288 bytes.
+
+							Loading from server...
+
+							Loaded 8784819 bytes.
+
+							Storing to device...
+
+							Stored 8781824 bytes.
+
+							Loading from server...
+
+							Loaded 8850355 bytes.
+
+							Storing to device...
+
+							Stored 8847360 bytes.
+
+							Loading from server...
+
+							Loaded 8915891 bytes.
+
+							Storing to device...
+
+							Stored 8912896 bytes.
+
+							Loading from server...
+
+							Loaded 8981427 bytes.
+
+							Storing to device...
+
+							Stored 8978432 bytes.
+
+							Loading from server...
+
+							Loaded 9046963 bytes.
+
+							Storing to device...
+
+							Stored 9043968 bytes.
+
+							Loading from server...
+
+							Loaded 9112499 bytes.
+
+							Storing to device...
+
+							Stored 9109504 bytes.
+
+							Loading from server...
+
+							Loaded 9178035 bytes.
+
+							Storing to device...
+
+							Stored 9175040 bytes.
+
+							Loading from server...
+
+							Loaded 9243571 bytes.
+
+							Storing to device...
+
+							Stored 9240576 bytes.
+
+							Loading from server...
+
+							Loaded 9309107 bytes.
+
+							Storing to device...
+
+							Stored 9306112 bytes.
+
+							Loading from server...
+
+							Loaded 9374643 bytes.
+
+							Storing to device...
+
+							Stored 9371648 bytes.
+
+							Loading from server...
+
+							Loaded 9440179 bytes.
+
+							Storing to device...
+
+							Stored 9437184 bytes.
+
+							Loading from server...
+
+							Loaded 9505715 bytes.
+
+							Storing to device...
+
+							Stored 9502720 bytes.
+
+							Loading from server...
+
+							Loaded 9571251 bytes.
+
+							Storing to device...
+
+							Stored 9568256 bytes.
+
+							Loading from server...
+
+							Loaded 9636787 bytes.
+
+							Storing to device...
+
+							Stored 9633792 bytes.
+
+							Loading from server...
+
+							Loaded 9702323 bytes.
+
+							Storing to device...
+
+							Stored 9699328 bytes.
+
+							Loading from server...
+
+							Loaded 9767859 bytes.
+
+							Storing to device...
+
+							Stored 9764864 bytes.
+
+							Loading from server...
+
+							Loaded 9833395 bytes.
+
+							Storing to device...
+
+							Stored 9830400 bytes.
+
+							Loading from server...
+
+							Loaded 9898931 bytes.
+
+							Storing to device...
+
+							Stored 9895936 bytes.
+
+							Loading from server...
+
+							Loaded 9964467 bytes.
+
+							Storing to device...
+
+							Stored 9961472 bytes.
+
+							Loading from server...
+
+							Loaded 10030003 bytes.
+
+							Storing to device...
+
+							Stored 10027008 bytes.
+
+							Loading from server...
+
+							Loaded 10095539 bytes.
+
+							Storing to device...
+
+							Stored 10092544 bytes.
+
+							Loading from server...
+
+							Loaded 10161075 bytes.
+
+							Storing to device...
+
+							Stored 10158080 bytes.
+
+							Loading from server...
+
+							Loaded 10226611 bytes.
+
+							Storing to device...
+
+							Stored 10223616 bytes.
+
+							Loading from server...
+
+							Loaded 10292147 bytes.
+
+							Storing to device...
+
+							Stored 10289152 bytes.
+
+							Loading from server...
+
+							Loaded 10357683 bytes.
+
+							Storing to device...
+
+							Stored 10354688 bytes.
+
+							Loading from server...
+
+							Loaded 10423219 bytes.
+
+							Storing to device...
+
+							Stored 10420224 bytes.
+
+							Loading from server...
+
+							Loaded 10488755 bytes.
+
+							Storing to device...
+
+							Stored 10485760 bytes.
+
+							Loading from server...
+
+							Loaded 10554291 bytes.
+
+							Storing to device...
+
+							Stored 10551296 bytes.
+
+							Loading from server...
+
+							Loaded 10619827 bytes.
+
+							Storing to device...
+
+							Stored 10616832 bytes.
+
+							Loading from server...
+
+							Loaded 10685363 bytes.
+
+							Storing to device...
+
+							Stored 10682368 bytes.
+
+							Loading from server...
+
+							Loaded 10750899 bytes.
+
+							Storing to device...
+
+							Stored 10747904 bytes.
+
+							Loading from server...
+
+							Loaded 10816435 bytes.
+
+							Storing to device...
+
+							Stored 10813440 bytes.
+
+							Loading from server...
+
+							Loaded 10881971 bytes.
+
+							Storing to device...
+
+							Stored 10878976 bytes.
+
+							Loading from server...
+
+							Loaded 10947507 bytes.
+
+							Storing to device...
+
+							Stored 10944512 bytes.
+
+							Loading from server...
+
+							Loaded 11013043 bytes.
+
+							Storing to device...
+
+							Stored 11010048 bytes.
+
+							Loading from server...
+
+							Loaded 11078579 bytes.
+
+							Storing to device...
+
+							Stored 11075584 bytes.
+
+							Loading from server...
+
+							Loaded 11144115 bytes.
+
+							Storing to device...
+
+							Stored 11141120 bytes.
+
+							Loading from server...
+
+							Loaded 11209651 bytes.
+
+							Storing to device...
+
+							Stored 11206656 bytes.
+
+							Loading from server...
+
+							Loaded 11275187 bytes.
+
+							Storing to device...
+
+							Stored 11272192 bytes.
+
+							Loading from server...
+
+							Loaded 11340723 bytes.
+
+							Storing to device...
+
+							Stored 11337728 bytes.
+
+							Loading from server...
+
+							Loaded 11406259 bytes.
+
+							Storing to device...
+
+							Stored 11403264 bytes.
+
+							Loading from server...
+
+							Loaded 11471795 bytes.
+
+							Storing to device...
+
+							Stored 11468800 bytes.
+
+							Loading from server...
+
+							Loaded 11537331 bytes.
+
+							Storing to device...
+
+							Stored 11534336 bytes.
+
+							Loading from server...
+
+							Loaded 11602867 bytes.
+
+							Storing to device...
+
+							Stored 11599872 bytes.
+
+							Loading from server...
+
+							Loaded 11668403 bytes.
+
+							Storing to device...
+
+							Stored 11665408 bytes.
+
+							Loading from server...
+
+							Loaded 11733939 bytes.
+
+							Storing to device...
+
+							Stored 11730944 bytes.
+
+							Loading from server...
+
+							Loaded 11799475 bytes.
+
+							Storing to device...
+
+							Stored 11796480 bytes.
+
+							Loading from server...
+
+							Loaded 11865011 bytes.
+
+							Storing to device...
+
+							Stored 11862016 bytes.
+
+							Loading from server...
+
+							Loaded 11930547 bytes.
+
+							Storing to device...
+
+							Stored 11927552 bytes.
+
+							Loading from server...
+
+							Loaded 11996083 bytes.
+
+							Storing to device...
+
+							Stored 11993088 bytes.
+
+							Loading from server...
+
+							Loaded 12061619 bytes.
+
+							Storing to device...
+
+							Stored 12058624 bytes.
+
+							Loading from server...
+
+							Loaded 12127155 bytes.
+
+							Storing to device...
+
+							Stored 12124160 bytes.
+
+							Loading from server...
+
+							Loaded 12192691 bytes.
+
+							Storing to device...
+
+							Stored 12189696 bytes.
+
+							Loading from server...
+
+							Loaded 12258227 bytes.
+
+							Storing to device...
+
+							Stored 12255232 bytes.
+
+							Loading from server...
+
+							Loaded 12323763 bytes.
+
+							Storing to device...
+
+							Stored 12320768 bytes.
+
+							Loading from server...
+
+							Loaded 12389299 bytes.
+
+							Storing to device...
+
+							Stored 12386304 bytes.
+
+							Loading from server...
+
+							Loaded 12454835 bytes.
+
+							Storing to device...
+
+							Stored 12451840 bytes.
+
+							Loading from server...
+
+							Loaded 12520371 bytes.
+
+							Storing to device...
+
+							Stored 12517376 bytes.
+
+							Loading from server...
+
+							Loaded 12585907 bytes.
+
+							Storing to device...
+
+							Stored 12582912 bytes.
+
+							Loading from server...
+
+							Loaded 12651443 bytes.
+
+							Storing to device...
+
+							Stored 12648448 bytes.
+
+							Loading from server...
+
+							Loaded 12716979 bytes.
+
+							Storing to device...
+
+							Stored 12713984 bytes.
+
+							Loading from server...
+
+							Loaded 12782515 bytes.
+
+							Storing to device...
+
+							Stored 12779520 bytes.
+
+							Loading from server...
+
+							Loaded 12848051 bytes.
+
+							Storing to device...
+
+							Stored 12845056 bytes.
+
+							Loading from server...
+
+							Loaded 12913587 bytes.
+
+							Storing to device...
+
+							Stored 12910592 bytes.
+
+							Loading from server...
+
+							Loaded 12979123 bytes.
+
+							Storing to device...
+
+							Stored 12976128 bytes.
+
+							Loading from server...
+
+							Loaded 13044659 bytes.
+
+							Storing to device...
+
+							Stored 13041664 bytes.
+
+							Loading from server...
+
+							Loaded 13110195 bytes.
+
+							Storing to device...
+
+							Stored 13107200 bytes.
+
+							Loading from server...
+
+							Loaded 13175731 bytes.
+
+							Storing to device...
+
+							Stored 13172736 bytes.
+
+							Loading from server...
+
+							Loaded 13241267 bytes.
+
+							Storing to device...
+
+							Stored 13238272 bytes.
+
+							Loading from server...
+
+							Loaded 13306803 bytes.
+
+							Storing to device...
+
+							Stored 13303808 bytes.
+
+							Loading from server...
+
+							Loaded 13372339 bytes.
+
+							Storing to device...
+
+							Stored 13369344 bytes.
+
+							Loading from server...
+
+							Loaded 13437875 bytes.
+
+							Storing to device...
+
+							Stored 13434880 bytes.
+
+							Loading from server...
+
+							Loaded 13503411 bytes.
+
+							Storing to device...
+
+							Stored 13500416 bytes.
+
+							Loading from server...
+
+							Loaded 13568947 bytes.
+
+							Storing to device...
+
+							Stored 13565952 bytes.
+
+							Loading from server...
+
+							Loaded 13634483 bytes.
+
+							Storing to device...
+
+							Stored 13631488 bytes.
+
+							Loading from server...
+
+							Loaded 13700019 bytes.
+
+							Storing to device...
+
+							Stored 13697024 bytes.
+
+							Loading from server...
+
+							Loaded 13765555 bytes.
+
+							Storing to device...
+
+							Stored 13762560 bytes.
+
+							Loading from server...
+
+							Loaded 13831091 bytes.
+
+							Storing to device...
+
+							Stored 13828096 bytes.
+
+							Loading from server...
+
+							Loaded 13896627 bytes.
+
+							Storing to device...
+
+							Stored 13893632 bytes.
+
+							Loading from server...
+
+							Loaded 13962163 bytes.
+
+							Storing to device...
+
+							Stored 13959168 bytes.
+
+							Loading from server...
+
+							Loaded 14027699 bytes.
+
+							Storing to device...
+
+							Stored 14024704 bytes.
+
+							Loading from server...
+
+							Loaded 14093235 bytes.
+
+							Storing to device...
+
+							Stored 14090240 bytes.
+
+							Loading from server...
+
+							Loaded 14158771 bytes.
+
+							Storing to device...
+
+							Stored 14155776 bytes.
+
+							Loading from server...
+
+							Loaded 14224307 bytes.
+
+							Storing to device...
+
+							Stored 14221312 bytes.
+
+							Loading from server...
+
+							Loaded 14289843 bytes.
+
+							Storing to device...
+
+							Stored 14286848 bytes.
+
+							Loading from server...
+
+							Loaded 14355379 bytes.
+
+							Storing to device...
+
+							Stored 14352384 bytes.
+
+							Loading from server...
+
+							Loaded 14420915 bytes.
+
+							Storing to device...
+
+							Stored 14417920 bytes.
+
+							Loading from server...
+
+							Loaded 14486451 bytes.
+
+							Storing to device...
+
+							Stored 14483456 bytes.
+
+							Loading from server...
+
+							Loaded 14551987 bytes.
+
+							Storing to device...
+
+							Stored 14548992 bytes.
+
+							Loading from server...
+
+							Loaded 14617523 bytes.
+
+							Storing to device...
+
+							Stored 14614528 bytes.
+
+							Loading from server...
+
+							Loaded 14683059 bytes.
+
+							Storing to device...
+
+							Stored 14680064 bytes.
+
+							Loading from server...
+
+							Loaded 14748595 bytes.
+
+							Storing to device...
+
+							Stored 14745600 bytes.
+
+							Loading from server...
+
+							Loaded 14814131 bytes.
+
+							Storing to device...
+
+							Stored 14811136 bytes.
+
+							Loading from server...
+
+							Loaded 14879667 bytes.
+
+							Storing to device...
+
+							Stored 14876672 bytes.
+
+							Loading from server...
+
+							Loaded 14945203 bytes.
+
+							Storing to device...
+
+							Stored 14942208 bytes.
+
+							Loading from server...
+
+							Loaded 15010739 bytes.
+
+							Storing to device...
+
+							Stored 15007744 bytes.
+
+							Loading from server...
+
+							Loaded 15076275 bytes.
+
+							Storing to device...
+
+							Stored 15073280 bytes.
+
+							Loading from server...
+
+							Loaded 15141811 bytes.
+
+							Storing to device...
+
+							Stored 15138816 bytes.
+
+							Loading from server...
+
+							Loaded 15207347 bytes.
+
+							Storing to device...
+
+							Stored 15204352 bytes.
+
+							Loading from server...
+
+							Loaded 15272883 bytes.
+
+							Storing to device...
+
+							Stored 15269888 bytes.
+
+							Loading from server...
+
+							Loaded 15338419 bytes.
+
+							Storing to device...
+
+							Stored 15335424 bytes.
+
+							Loading from server...
+
+							Loaded 15403955 bytes.
+
+							Storing to device...
+
+							Stored 15400960 bytes.
+
+							Loading from server...
+
+							Loaded 15469491 bytes.
+
+							Storing to device...
+
+							Stored 15466496 bytes.
+
+							Loading from server...
+
+							Loaded 15535027 bytes.
+
+							Storing to device...
+
+							Stored 15532032 bytes.
+
+							Loading from server...
+
+							Loaded 15600563 bytes.
+
+							Storing to device...
+
+							Stored 15597568 bytes.
+
+							Loading from server...
+
+							Loaded 15666099 bytes.
+
+							Storing to device...
+
+							Stored 15663104 bytes.
+
+							Loading from server...
+
+							Loaded 15731635 bytes.
+
+							Storing to device...
+
+							Stored 15728640 bytes.
+
+							Loading from server...
+
+							Loaded 15797171 bytes.
+
+							Storing to device...
+
+							Stored 15794176 bytes.
+
+							Loading from server...
+
+							Loaded 15862707 bytes.
+
+							Storing to device...
+
+							Stored 15859712 bytes.
+
+							Loading from server...
+
+							Loaded 15928243 bytes.
+
+							Storing to device...
+
+							Stored 15925248 bytes.
+
+							Loading from server...
+
+							Loaded 15993779 bytes.
+
+							Storing to device...
+
+							Stored 15990784 bytes.
+
+							Loading from server...
+
+							Loaded 16059315 bytes.
+
+							Storing to device...
+
+							Stored 16056320 bytes.
+
+							Loading from server...
+
+							Loaded 16124851 bytes.
+
+							Storing to device...
+
+							Stored 16121856 bytes.
+
+							Loading from server...
+
+							Loaded 16190387 bytes.
+
+							Storing to device...
+
+							Stored 16187392 bytes.
+
+							Loading from server...
+
+							Loaded 16255923 bytes.
+
+							Storing to device...
+
+							Stored 16252928 bytes.
+
+							Loading from server...
+
+							Loaded 16321459 bytes.
+
+							Storing to device...
+
+							Stored 16318464 bytes.
+
+							Loading from server...
+
+							Loaded 16386995 bytes.
+
+							Storing to device...
+
+							Stored 16384000 bytes.
+
+							Loading from server...
+
+							Loaded 16452531 bytes.
+
+							Storing to device...
+
+							Stored 16449536 bytes.
+
+							Loading from server...
+
+							Loaded 16518067 bytes.
+
+							Storing to device...
+
+							Stored 16515072 bytes.
+
+							Loading from server...
+
+							Loaded 16583603 bytes.
+
+							Storing to device...
+
+							Stored 16580608 bytes.
+
+							Loading from server...
+
+							Loaded 16649139 bytes.
+
+							Storing to device...
+
+							Stored 16646144 bytes.
+
+							Loading from server...
+
+							Loaded 16714675 bytes.
+
+							Storing to device...
+
+							Stored 16711680 bytes.
+
+							Loading from server...
+
+							Loaded 16780211 bytes.
+
+							Storing to device...
+
+							Stored 16777216 bytes.
+
+							Loading from server...
+
+							Loaded 16845747 bytes.
+
+							Storing to device...
+
+							Stored 16842752 bytes.
+
+							Loading from server...
+
+							Loaded 16911283 bytes.
+
+							Storing to device...
+
+							Stored 16908288 bytes.
+
+							Loading from server...
+
+							Loaded 16976819 bytes.
+
+							Storing to device...
+
+							Stored 16973824 bytes.
+
+							Loading from server...
+
+							Loaded 17042355 bytes.
+
+							Storing to device...
+
+							Stored 17039360 bytes.
+
+							Loading from server...
+
+							Loaded 17107891 bytes.
+
+							Storing to device...
+
+							Stored 17104896 bytes.
+
+							Loading from server...
+
+							Loaded 17173427 bytes.
+
+							Storing to device...
+
+							Stored 17170432 bytes.
+
+							Loading from server...
+
+							Loaded 17238963 bytes.
+
+							Storing to device...
+
+							Stored 17235968 bytes.
+
+							Loading from server...
+
+							Loaded 17304499 bytes.
+
+							Storing to device...
+
+							Stored 17301504 bytes.
+
+							Loading from server...
+
+							Loaded 17370035 bytes.
+
+							Storing to device...
+
+							Stored 17367040 bytes.
+
+							Loading from server...
+
+							Loaded 17435571 bytes.
+
+							Storing to device...
+
+							Stored 17432576 bytes.
+
+							Loading from server...
+
+							Loaded 17501107 bytes.
+
+							Storing to device...
+
+							Stored 17498112 bytes.
+
+							Loading from server...
+
+							Loaded 17566643 bytes.
+
+							Storing to device...
+
+							Stored 17563648 bytes.
+
+							Loading from server...
+
+							Loaded 17632179 bytes.
+
+							Storing to device...
+
+							Stored 17629184 bytes.
+
+							Loading from server...
+
+							Loaded 17697715 bytes.
+
+							Storing to device...
+
+							Stored 17694720 bytes.
+
+							Loading from server...
+
+							Loaded 17763251 bytes.
+
+							Storing to device...
+
+							Stored 17760256 bytes.
+
+							Loading from server...
+
+							Loaded 17828787 bytes.
+
+							Storing to device...
+
+							Stored 17825792 bytes.
+
+							Loading from server...
+
+							Loaded 17894323 bytes.
+
+							Storing to device...
+
+							Stored 17891328 bytes.
+
+							Loading from server...
+
+							Loaded 17959859 bytes.
+
+							Storing to device...
+
+							Stored 17956864 bytes.
+
+							Loading from server...
+
+							Loaded 18025395 bytes.
+
+							Storing to device...
+
+							Stored 18022400 bytes.
+
+							Loading from server...
+
+							Loaded 18090931 bytes.
+
+							Storing to device...
+
+							Stored 18087936 bytes.
+
+							Loading from server...
+
+							Loaded 18156467 bytes.
+
+							Storing to device...
+
+							Stored 18153472 bytes.
+
+							Loading from server...
+
+							Loaded 18222003 bytes.
+
+							Storing to device...
+
+							Stored 18219008 bytes.
+
+							Loading from server...
+
+							Loaded 18287539 bytes.
+
+							Storing to device...
+
+							Stored 18284544 bytes.
+
+							Loading from server...
+
+							Loaded 18353075 bytes.
+
+							Storing to device...
+
+							Stored 18350080 bytes.
+
+							Loading from server...
+
+							Loaded 18418611 bytes.
+
+							Storing to device...
+
+							Stored 18415616 bytes.
+
+							Loading from server...
+
+							Loaded 18484147 bytes.
+
+							Storing to device...
+
+							Stored 18481152 bytes.
+
+							Loading from server...
+
+							Loaded 18549683 bytes.
+
+							Storing to device...
+
+							Stored 18546688 bytes.
+
+							Loading from server...
+
+							Loaded 18615219 bytes.
+
+							Storing to device...
+
+							Stored 18612224 bytes.
+
+							Loading from server...
+
+							Loaded 18680755 bytes.
+
+							Storing to device...
+
+							Stored 18677760 bytes.
+
+							Loading from server...
+
+							Loaded 18746291 bytes.
+
+							Storing to device...
+
+							Stored 18743296 bytes.
+
+							Loading from server...
+
+							Loaded 18811827 bytes.
+
+							Storing to device...
+
+							Stored 18808832 bytes.
+
+							Loading from server...
+
+							Loaded 18877363 bytes.
+
+							Storing to device...
+
+							Stored 18874368 bytes.
+
+							Loading from server...
+
+							Loaded 18942899 bytes.
+
+							Storing to device...
+
+							Stored 18939904 bytes.
+
+							Loading from server...
+
+							Loaded 19008435 bytes.
+
+							Storing to device...
+
+							Stored 19005440 bytes.
+
+							Loading from server...
+
+							Loaded 19073971 bytes.
+
+							Storing to device...
+
+							Stored 19070976 bytes.
+
+							Loading from server...
+
+							Loaded 19139507 bytes.
+
+							Storing to device...
+
+							Stored 19136512 bytes.
+
+							Loading from server...
+
+							Loaded 19205043 bytes.
+
+							Storing to device...
+
+							Stored 19202048 bytes.
+
+							Loading from server...
+
+							Loaded 19270579 bytes.
+
+							Storing to device...
+
+							Stored 19267584 bytes.
+
+							Loading from server...
+
+							Loaded 19336115 bytes.
+
+							Storing to device...
+
+							Stored 19333120 bytes.
+
+							Loading from server...
+
+							Loaded 19401651 bytes.
+
+							Storing to device...
+
+							Stored 19398656 bytes.
+
+							Loading from server...
+
+							Loaded 19467187 bytes.
+
+							Storing to device...
+
+							Stored 19464192 bytes.
+
+							Loading from server...
+
+							Loaded 19532723 bytes.
+
+							Storing to device...
+
+							Stored 19529728 bytes.
+
+							Loading from server...
+
+							Loaded 19598259 bytes.
+
+							Storing to device...
+
+							Stored 19595264 bytes.
+
+							Loading from server...
+
+							Loaded 19663795 bytes.
+
+							Storing to device...
+
+							Stored 19660800 bytes.
+
+							Loading from server...
+
+							Loaded 19729331 bytes.
+
+							Storing to device...
+
+							Stored 19726336 bytes.
+
+							Loading from server...
+
+							Loaded 19794867 bytes.
+
+							Storing to device...
+
+							Stored 19791872 bytes.
+
+							Loading from server...
+
+							Loaded 19860403 bytes.
+
+							Storing to device...
+
+							Stored 19857408 bytes.
+
+							Loading from server...
+
+							Loaded 19925939 bytes.
+
+							Storing to device...
+
+							Stored 19922944 bytes.
+
+							Loading from server...
+
+							Loaded 19991475 bytes.
+
+							Storing to device...
+
+							Stored 19988480 bytes.
+
+							Loading from server...
+
+							Loaded 20057011 bytes.
+
+							Storing to device...
+
+							Stored 20054016 bytes.
+
+							Loading from server...
+
+							Loaded 20122547 bytes.
+
+							Storing to device...
+
+							Stored 20119552 bytes.
+
+							Loading from server...
+
+							Loaded 20188083 bytes.
+
+							Storing to device...
+
+							Stored 20185088 bytes.
+
+							Loading from server...
+
+							Loaded 20253619 bytes.
+
+							Storing to device...
+
+							Stored 20250624 bytes.
+
+							Loading from server...
+
+							Loaded 20319155 bytes.
+
+							Storing to device...
+
+							Stored 20316160 bytes.
+
+							Loading from server...
+
+							Loaded 20384691 bytes.
+
+							Storing to device...
+
+							Stored 20381696 bytes.
+
+							Loading from server...
+
+							Loaded 20450227 bytes.
+
+							Storing to device...
+
+							Stored 20447232 bytes.
+
+							Loading from server...
+
+							Loaded 20515763 bytes.
+
+							Storing to device...
+
+							Stored 20512768 bytes.
+
+							Loading from server...
+
+							Loaded 20581299 bytes.
+
+							Storing to device...
+
+							Stored 20578304 bytes.
+
+							Loading from server...
+
+							Loaded 20646835 bytes.
+
+							Storing to device...
+
+							Stored 20643840 bytes.
+
+							Loading from server...
+
+							Loaded 20712371 bytes.
+
+							Storing to device...
+
+							Stored 20709376 bytes.
+
+							Loading from server...
+
+							Loaded 20777907 bytes.
+
+							Storing to device...
+
+							Stored 20774912 bytes.
+
+							Loading from server...
+
+							Loaded 20843443 bytes.
+
+							Storing to device...
+
+							Stored 20840448 bytes.
+
+							Loading from server...
+
+							Loaded 20908979 bytes.
+
+							Storing to device...
+
+							Stored 20905984 bytes.
+
+							Loading from server...
+
+							Loaded 20974515 bytes.
+
+							Storing to device...
+
+							Stored 20971520 bytes.
+
+							Loading from server...
+
+							Loaded 21040051 bytes.
+
+							Storing to device...
+
+							Stored 21037056 bytes.
+
+							Loading from server...
+
+							Loaded 21105587 bytes.
+
+							Storing to device...
+
+							Stored 21102592 bytes.
+
+							Loading from server...
+
+							Loaded 21171123 bytes.
+
+							Storing to device...
+
+							Stored 21168128 bytes.
+
+							Loading from server...
+
+							Loaded 21236659 bytes.
+
+							Storing to device...
+
+							Stored 21233664 bytes.
+
+							Loading from server...
+
+							Loaded 21302195 bytes.
+
+							Storing to device...
+
+							Stored 21299200 bytes.
+
+							Loading from server...
+
+							Loaded 21367731 bytes.
+
+							Storing to device...
+
+							Stored 21364736 bytes.
+
+							Loading from server...
+
+							Loaded 21433267 bytes.
+
+							Storing to device...
+
+							Stored 21430272 bytes.
+
+							Loading from server...
+
+							Loaded 21498803 bytes.
+
+							Storing to device...
+
+							Stored 21495808 bytes.
+
+							Loading from server...
+
+							Loaded 21564339 bytes.
+
+							Storing to device...
+
+							Stored 21561344 bytes.
+
+							Loading from server...
+
+							Loaded 21629875 bytes.
+
+							Storing to device...
+
+							Stored 21626880 bytes.
+
+							Loading from server...
+
+							Loaded 21695411 bytes.
+
+							Storing to device...
+
+							Stored 21692416 bytes.
+
+							Loading from server...
+
+							Loaded 21760947 bytes.
+
+							Storing to device...
+
+							Stored 21757952 bytes.
+
+							Loading from server...
+
+							Loaded 21826483 bytes.
+
+							Storing to device...
+
+							Stored 21823488 bytes.
+
+							Loading from server...
+
+							Loaded 21892019 bytes.
+
+							Storing to device...
+
+							Stored 21889024 bytes.
+
+							Loading from server...
+
+							Loaded 21957555 bytes.
+
+							Storing to device...
+
+							Stored 21954560 bytes.
+
+							Loading from server...
+
+							Loaded 22023091 bytes.
+
+							Storing to device...
+
+							Stored 22020096 bytes.
+
+							Loading from server...
+
+							Loaded 22088627 bytes.
+
+							Storing to device...
+
+							Stored 22085632 bytes.
+
+							Loading from server...
+
+							Loaded 22154163 bytes.
+
+							Storing to device...
+
+							Stored 22151168 bytes.
+
+							Loading from server...
+
+							Loaded 22219699 bytes.
+
+							Storing to device...
+
+							Stored 22216704 bytes.
+
+							Loading from server...
+
+							Loaded 22285235 bytes.
+
+							Storing to device...
+
+							Stored 22282240 bytes.
+
+							Loading from server...
+
+							Loaded 22350771 bytes.
+
+							Storing to device...
+
+							Stored 22347776 bytes.
+
+							Loading from server...
+
+							Loaded 22416307 bytes.
+
+							Storing to device...
+
+							Stored 22413312 bytes.
+
+							Loading from server...
+
+							Loaded 22481843 bytes.
+
+							Storing to device...
+
+							Stored 22478848 bytes.
+
+							Loading from server...
+
+							Loaded 22547379 bytes.
+
+							Storing to device...
+
+							Stored 22544384 bytes.
+
+							Loading from server...
+
+							Loaded 22612915 bytes.
+
+							Storing to device...
+
+							Stored 22609920 bytes.
+
+							Loading from server...
+
+							Loaded 22678451 bytes.
+
+							Storing to device...
+
+							Stored 22675456 bytes.
+
+							Loading from server...
+
+							Loaded 22743987 bytes.
+
+							Storing to device...
+
+							Stored 22740992 bytes.
+
+							Loading from server...
+
+							Loaded 22809523 bytes.
+
+							Storing to device...
+
+							Stored 22806528 bytes.
+
+							Loading from server...
+
+							Loaded 22875059 bytes.
+
+							Storing to device...
+
+							Stored 22872064 bytes.
+
+							Loading from server...
+
+							Loaded 22940595 bytes.
+
+							Storing to device...
+
+							Stored 22937600 bytes.
+
+							Loading from server...
+
+							Loaded 23006131 bytes.
+
+							Storing to device...
+
+							Stored 23003136 bytes.
+
+							Loading from server...
+
+							Loaded 23071667 bytes.
+
+							Storing to device...
+
+							Stored 23068672 bytes.
+
+							Loading from server...
+
+							Loaded 23137203 bytes.
+
+							Storing to device...
+
+							Stored 23134208 bytes.
+
+							Loading from server...
+
+							Loaded 23202739 bytes.
+
+							Storing to device...
+
+							Stored 23199744 bytes.
+
+							Loading from server...
+
+							Loaded 23268275 bytes.
+
+							Storing to device...
+
+							Stored 23265280 bytes.
+
+							Loading from server...
+
+							Loaded 23333811 bytes.
+
+							Storing to device...
+
+							Stored 23330816 bytes.
+
+							Loading from server...
+
+							Loaded 23399347 bytes.
+
+							Storing to device...
+
+							Stored 23396352 bytes.
+
+							Loading from server...
+
+							Loaded 23464883 bytes.
+
+							Storing to device...
+
+							Stored 23461888 bytes.
+
+							Loading from server...
+
+							Loaded 23530419 bytes.
+
+							Storing to device...
+
+							Stored 23527424 bytes.
+
+							Loading from server...
+
+							Loaded 23595955 bytes.
+
+							Storing to device...
+
+							Stored 23592960 bytes.
+
+							Loading from server...
+
+							Loaded 23661491 bytes.
+
+							Storing to device...
+
+							Stored 23658496 bytes.
+
+							Loading from server...
+
+							Loaded 23727027 bytes.
+
+							Storing to device...
+
+							Stored 23724032 bytes.
+
+							Loading from server...
+
+							Loaded 23792563 bytes.
+
+							Storing to device...
+
+							Stored 23789568 bytes.
+
+							Loading from server...
+
+							Loaded 23858099 bytes.
+
+							Storing to device...
+
+							Stored 23855104 bytes.
+
+							Loading from server...
+
+							Loaded 23923635 bytes.
+
+							Storing to device...
+
+							Stored 23920640 bytes.
+
+							Loading from server...
+
+							Loaded 23989171 bytes.
+
+							Storing to device...
+
+							Stored 23986176 bytes.
+
+							Loading from server...
+
+							Loaded 24054707 bytes.
+
+							Storing to device...
+
+							Stored 24051712 bytes.
+
+							Loading from server...
+
+							Loaded 24120243 bytes.
+
+							Storing to device...
+
+							Stored 24117248 bytes.
+
+							Loading from server...
+
+							Loaded 24185779 bytes.
+
+							Storing to device...
+
+							Stored 24182784 bytes.
+
+							Loading from server...
+
+							Loaded 24251315 bytes.
+
+							Storing to device...
+
+							Stored 24248320 bytes.
+
+							Loading from server...
+
+							Loaded 24316851 bytes.
+
+							Storing to device...
+
+							Stored 24313856 bytes.
+
+							Loading from server...
+
+							Loaded 24382387 bytes.
+
+							Storing to device...
+
+							Stored 24379392 bytes.
+
+							Loading from server...
+
+							Loaded 24447923 bytes.
+
+							Storing to device...
+
+							Stored 24444928 bytes.
+
+							Loading from server...
+
+							Loaded 24513459 bytes.
+
+							Storing to device...
+
+							Stored 24510464 bytes.
+
+							Loading from server...
+
+							Loaded 24578995 bytes.
+
+							Storing to device...
+
+							Stored 24576000 bytes.
+
+							Loading from server...
+
+							Loaded 24644531 bytes.
+
+							Storing to device...
+
+							Stored 24641536 bytes.
+
+							Loading from server...
+
+							Loaded 24710067 bytes.
+
+							Storing to device...
+
+							Stored 24707072 bytes.
+
+							Loading from server...
+
+							Loaded 24775603 bytes.
+
+							Storing to device...
+
+							Stored 24772608 bytes.
+
+							Loading from server...
+
+							Loaded 24841139 bytes.
+
+							Storing to device...
+
+							Stored 24838144 bytes.
+
+							Loading from server...
+
+							Loaded 24906675 bytes.
+
+							Storing to device...
+
+							Stored 24903680 bytes.
+
+							Loading from server...
+
+							Loaded 24972211 bytes.
+
+							Storing to device...
+
+							Stored 24969216 bytes.
+
+							Loading from server...
+
+							Loaded 25037747 bytes.
+
+							Storing to device...
+
+							Stored 25034752 bytes.
+
+							Loading from server...
+
+							Loaded 25103283 bytes.
+
+							Storing to device...
+
+							Stored 25100288 bytes.
+
+							Loading from server...
+
+							Loaded 25168819 bytes.
+
+							Storing to device...
+
+							Stored 25165824 bytes.
+
+							Loading from server...
+
+							Loaded 25234355 bytes.
+
+							Storing to device...
+
+							Stored 25231360 bytes.
+
+							Loading from server...
+
+							Loaded 25299891 bytes.
+
+							Storing to device...
+
+							Stored 25296896 bytes.
+
+							Loading from server...
+
+							Loaded 25365427 bytes.
+
+							Storing to device...
+
+							Stored 25362432 bytes.
+
+							Loading from server...
+
+							Loaded 25430963 bytes.
+
+							Storing to device...
+
+							Stored 25427968 bytes.
+
+							Loading from server...
+
+							Loaded 25496499 bytes.
+
+							Storing to device...
+
+							Stored 25493504 bytes.
+
+							Loading from server...
+
+							Loaded 25562035 bytes.
+
+							Storing to device...
+
+							Stored 25559040 bytes.
+
+							Loading from server...
+
+							Loaded 25627571 bytes.
+
+							Storing to device...
+
+							Stored 25624576 bytes.
+
+							Loading from server...
+
+							Loaded 25693107 bytes.
+
+							Storing to device...
+
+							Stored 25690112 bytes.
+
+							Loading from server...
+
+							Loaded 25758643 bytes.
+
+							Storing to device...
+
+							Stored 25755648 bytes.
+
+							Loading from server...
+
+							Loaded 25824179 bytes.
+
+							Storing to device...
+
+							Stored 25821184 bytes.
+
+							Loading from server...
+
+							Loaded 25889715 bytes.
+
+							Storing to device...
+
+							Stored 25886720 bytes.
+
+							Loading from server...
+
+							Loaded 25955251 bytes.
+
+							Storing to device...
+
+							Stored 25952256 bytes.
+
+							Loading from server...
+
+							Loaded 26020787 bytes.
+
+							Storing to device...
+
+							Stored 26017792 bytes.
+
+							Loading from server...
+
+							Loaded 26086323 bytes.
+
+							Storing to device...
+
+							Stored 26083328 bytes.
+
+							Loading from server...
+
+							Loaded 26151859 bytes.
+
+							Storing to device...
+
+							Stored 26148864 bytes.
+
+							Loading from server...
+
+							Loaded 26217395 bytes.
+
+							Storing to device...
+
+							Stored 26214400 bytes.
+
+							Loading from server...
+
+							Loaded 26282931 bytes.
+
+							Storing to device...
+
+							Stored 26279936 bytes.
+
+							Loading from server...
+
+							Loaded 26348467 bytes.
+
+							Storing to device...
+
+							Stored 26345472 bytes.
+
+							Loading from server...
+
+							Loaded 26414003 bytes.
+
+							Storing to device...
+
+							Stored 26411008 bytes.
+
+							Loading from server...
+
+							Loaded 26479539 bytes.
+
+							Storing to device...
+
+							Stored 26476544 bytes.
+
+							Loading from server...
+
+							Loaded 26545075 bytes.
+
+							Storing to device...
+
+							Stored 26542080 bytes.
+
+							Loading from server...
+
+							Loaded 26610611 bytes.
+
+							Storing to device...
+
+							Stored 26607616 bytes.
+
+							Loading from server...
+
+							Loaded 26676147 bytes.
+
+							Storing to device...
+
+							Stored 26673152 bytes.
+
+							Loading from server...
+
+							Loaded 26741683 bytes.
+
+							Storing to device...
+
+							Stored 26738688 bytes.
+
+							Loading from server...
+
+							Loaded 26807219 bytes.
+
+							Storing to device...
+
+							Stored 26804224 bytes.
+
+							Loading from server...
+
+							Loaded 26872755 bytes.
+
+							Storing to device...
+
+							Stored 26869760 bytes.
+
+							Loading from server...
+
+							Loaded 26938291 bytes.
+
+							Storing to device...
+
+							Stored 26935296 bytes.
+
+							Loading from server...
+
+							Loaded 27003827 bytes.
+
+							Storing to device...
+
+							Stored 27000832 bytes.
+
+							Loading from server...
+
+							Loaded 27069363 bytes.
+
+							Storing to device...
+
+							Stored 27066368 bytes.
+
+							Loading from server...
+
+							Loaded 27134899 bytes.
+
+							Storing to device...
+
+							Stored 27131904 bytes.
+
+							Loading from server...
+
+							Loaded 27200435 bytes.
+
+							Storing to device...
+
+							Stored 27197440 bytes.
+
+							Loading from server...
+
+							Loaded 27265971 bytes.
+
+							Storing to device...
+
+							Stored 27262976 bytes.
+
+							Loading from server...
+
+							Loaded 27331507 bytes.
+
+							Storing to device...
+
+							Stored 27328512 bytes.
+
+							Loading from server...
+
+							Loaded 27397043 bytes.
+
+							Storing to device...
+
+							Stored 27394048 bytes.
+
+							Loading from server...
+
+							Loaded 27462579 bytes.
+
+							Storing to device...
+
+							Stored 27459584 bytes.
+
+							Loading from server...
+
+							Loaded 27528115 bytes.
+
+							Storing to device...
+
+							Stored 27525120 bytes.
+
+							Loading from server...
+
+							Loaded 27593651 bytes.
+
+							Storing to device...
+
+							Stored 27590656 bytes.
+
+							Loading from server...
+
+							Loaded 27659187 bytes.
+
+							Storing to device...
+
+							Stored 27656192 bytes.
+
+							Loading from server...
+
+							Loaded 27724723 bytes.
+
+							Storing to device...
+
+							Stored 27721728 bytes.
+
+							Loading from server...
+
+							Loaded 27790259 bytes.
+
+							Storing to device...
+
+							Stored 27787264 bytes.
+
+							Loading from server...
+
+							Loaded 27855795 bytes.
+
+							Storing to device...
+
+							Stored 27852800 bytes.
+
+							Loading from server...
+
+							Loaded 27921331 bytes.
+
+							Storing to device...
+
+							Stored 27918336 bytes.
+
+							Loading from server...
+
+							Loaded 27986867 bytes.
+
+							Storing to device...
+
+							Stored 27983872 bytes.
+
+							Loading from server...
+
+							Loaded 28052403 bytes.
+
+							Storing to device...
+
+							Stored 28049408 bytes.
+
+							Loading from server...
+
+							Loaded 28117939 bytes.
+
+							Storing to device...
+
+							Stored 28114944 bytes.
+
+							Loading from server...
+
+							Loaded 28183475 bytes.
+
+							Storing to device...
+
+							Stored 28180480 bytes.
+
+							Loading from server...
+
+							Loaded 28249011 bytes.
+
+							Storing to device...
+
+							Stored 28246016 bytes.
+
+							Loading from server...
+
+							Loaded 28314547 bytes.
+
+							Storing to device...
+
+							Stored 28311552 bytes.
+
+							Loading from server...
+
+							Loaded 28380083 bytes.
+
+							Storing to device...
+
+							Stored 28377088 bytes.
+
+							Loading from server...
+
+							Loaded 28445619 bytes.
+
+							Storing to device...
+
+							Stored 28442624 bytes.
+
+							Loading from server...
+
+							Loaded 28511155 bytes.
+
+							Storing to device...
+
+							Stored 28508160 bytes.
+
+							Loading from server...
+
+							Loaded 28576691 bytes.
+
+							Storing to device...
+
+							Stored 28573696 bytes.
+
+							Loading from server...
+
+							Loaded 28642227 bytes.
+
+							Storing to device...
+
+							Stored 28639232 bytes.
+
+							Loading from server...
+
+							Loaded 28707763 bytes.
+
+							Storing to device...
+
+							Stored 28704768 bytes.
+
+							Loading from server...
+
+							Loaded 28773299 bytes.
+
+							Storing to device...
+
+							Stored 28770304 bytes.
+
+							Loading from server...
+
+							Loaded 28838835 bytes.
+
+							Storing to device...
+
+							Stored 28835840 bytes.
+
+							Loading from server...
+
+							Loaded 28904371 bytes.
+
+							Storing to device...
+
+							Stored 28901376 bytes.
+
+							Loading from server...
+
+							Loaded 28969907 bytes.
+
+							Storing to device...
+
+							Stored 28966912 bytes.
+
+							Loading from server...
+
+							Loaded 29035443 bytes.
+
+							Storing to device...
+
+							Stored 29032448 bytes.
+
+							Loading from server...
+
+							Loaded 29100979 bytes.
+
+							Storing to device...
+
+							Stored 29097984 bytes.
+
+							Loading from server...
+
+							Loaded 29166515 bytes.
+
+							Storing to device...
+
+							Stored 29163520 bytes.
+
+							Loading from server...
+
+							Loaded 29232051 bytes.
+
+							Storing to device...
+
+							Stored 29229056 bytes.
+
+							Loading from server...
+
+							Loaded 29297587 bytes.
+
+							Storing to device...
+
+							Stored 29294592 bytes.
+
+							Loading from server...
+
+							Loaded 29363123 bytes.
+
+							Storing to device...
+
+							Stored 29360128 bytes.
+
+							Loading from server...
+
+							Loaded 29428659 bytes.
+
+							Storing to device...
+
+							Stored 29425664 bytes.
+
+							Loading from server...
+
+							Loaded 29494195 bytes.
+
+							Storing to device...
+
+							Stored 29491200 bytes.
+
+							Loading from server...
+
+							Loaded 29559731 bytes.
+
+							Storing to device...
+
+							Stored 29556736 bytes.
+
+							Loading from server...
+
+							Loaded 29625267 bytes.
+
+							Storing to device...
+
+							Stored 29622272 bytes.
+
+							Loading from server...
+
+							Loaded 29690803 bytes.
+
+							Storing to device...
+
+							Stored 29687808 bytes.
+
+							Loading from server...
+
+							Loaded 29756339 bytes.
+
+							Storing to device...
+
+							Stored 29753344 bytes.
+
+							Loading from server...
+
+							Loaded 29821875 bytes.
+
+							Storing to device...
+
+							Stored 29818880 bytes.
+
+							Loading from server...
+
+							Loaded 29887411 bytes.
+
+							Storing to device...
+
+							Stored 29884416 bytes.
+
+							Loading from server...
+
+							Loaded 29952947 bytes.
+
+							Storing to device...
+
+							Stored 29949952 bytes.
+
+							Loading from server...
+
+							Loaded 30018483 bytes.
+
+							Storing to device...
+
+							Stored 30015488 bytes.
+
+							Loading from server...
+
+							Loaded 30084019 bytes.
+
+							Storing to device...
+
+							Stored 30081024 bytes.
+
+							Loading from server...
+
+							Loaded 30149555 bytes.
+
+							Storing to device...
+
+							Stored 30146560 bytes.
+
+							Loading from server...
+
+							Loaded 30215091 bytes.
+
+							Storing to device...
+
+							Stored 30212096 bytes.
+
+							Loading from server...
+
+							Loaded 30280627 bytes.
+
+							Storing to device...
+
+							Stored 30277632 bytes.
+
+							Loading from server...
+
+							Loaded 30346163 bytes.
+
+							Storing to device...
+
+							Stored 30343168 bytes.
+
+							Loading from server...
+
+							Loaded 30411699 bytes.
+
+							Storing to device...
+
+							Stored 30408704 bytes.
+
+							Loading from server...
+
+							Loaded 30477235 bytes.
+
+							Storing to device...
+
+							Stored 30474240 bytes.
+
+							Loading from server...
+
+							Loaded 30542771 bytes.
+
+							Storing to device...
+
+							Stored 30539776 bytes.
+
+							Loading from server...
+
+							Loaded 30608307 bytes.
+
+							Storing to device...
+
+							Stored 30605312 bytes.
+
+							Loading from server...
+
+							Loaded 30673843 bytes.
+
+							Storing to device...
+
+							Stored 30670848 bytes.
+
+							Loading from server...
+
+							Loaded 30739379 bytes.
+
+							Storing to device...
+
+							Stored 30736384 bytes.
+
+							Loading from server...
+
+							Loaded 30804915 bytes.
+
+							Storing to device...
+
+							Stored 30801920 bytes.
+
+							Loading from server...
+
+							Loaded 30870451 bytes.
+
+							Storing to device...
+
+							Stored 30867456 bytes.
+
+							Loading from server...
+
+							Loaded 30935987 bytes.
+
+							Storing to device...
+
+							Stored 30932992 bytes.
+
+							Loading from server...
+
+							Loaded 31001523 bytes.
+
+							Storing to device...
+
+							Stored 30998528 bytes.
+
+							Loading from server...
+
+							Loaded 31067059 bytes.
+
+							Storing to device...
+
+							Stored 31064064 bytes.
+
+							Loading from server...
+
+							Loaded 31132595 bytes.
+
+							Storing to device...
+
+							Stored 31129600 bytes.
+
+							Loading from server...
+
+							Loaded 31198131 bytes.
+
+							Storing to device...
+
+							Stored 31195136 bytes.
+
+							Loading from server...
+
+							Loaded 31263667 bytes.
+
+							Storing to device...
+
+							Stored 31260672 bytes.
+
+							Loading from server...
+
+							Loaded 31329203 bytes.
+
+							Storing to device...
+
+							Stored 31326208 bytes.
+
+							Loading from server...
+
+							Loaded 31394739 bytes.
+
+							Storing to device...
+
+							Stored 31391744 bytes.
+
+							Loading from server...
+
+							Loaded 31460275 bytes.
+
+							Storing to device...
+
+							Stored 31457280 bytes.
+
+							Loading from server...
+
+							Loaded 31525811 bytes.
+
+							Storing to device...
+
+							Stored 31522816 bytes.
+
+							Loading from server...
+
+							Loaded 31591347 bytes.
+
+							Storing to device...
+
+							Stored 31588352 bytes.
+
+							Loading from server...
+
+							Loaded 31656883 bytes.
+
+							Storing to device...
+
+							Stored 31653888 bytes.
+
+							Loading from server...
+
+							Loaded 31722419 bytes.
+
+							Storing to device...
+
+							Stored 31719424 bytes.
+
+							Loading from server...
+
+							Loaded 31787955 bytes.
+
+							Storing to device...
+
+							Stored 31784960 bytes.
+
+							Loading from server...
+
+							Loaded 31853491 bytes.
+
+							Storing to device...
+
+							Stored 31850496 bytes.
+
+							Loading from server...
+
+							Loaded 31919027 bytes.
+
+							Storing to device...
+
+							Stored 31916032 bytes.
+
+							Loading from server...
+
+							Loaded 31984563 bytes.
+
+							Storing to device...
+
+							Stored 31981568 bytes.
+
+							Loading from server...
+
+							Loaded 32050099 bytes.
+
+							Storing to device...
+
+							Stored 32047104 bytes.
+
+							Loading from server...
+
+							Loaded 32115635 bytes.
+
+							Storing to device...
+
+							Stored 32112640 bytes.
+
+							Loading from server...
+
+							Loaded 32181171 bytes.
+
+							Storing to device...
+
+							Stored 32178176 bytes.
+
+							Loading from server...
+
+							Loaded 32246707 bytes.
+
+							Storing to device...
+
+							Stored 32243712 bytes.
+
+							Loading from server...
+
+							Loaded 32312243 bytes.
+
+							Storing to device...
+
+							Stored 32309248 bytes.
+
+							Loading from server...
+
+							Loaded 32377779 bytes.
+
+							Storing to device...
+
+							Stored 32374784 bytes.
+
+							Loading from server...
+
+							Loaded 32443315 bytes.
+
+							Storing to device...
+
+							Stored 32440320 bytes.
+
+							Loading from server...
+
+							Loaded 32508851 bytes.
+
+							Storing to device...
+
+							Stored 32505856 bytes.
+
+							Loading from server...
+
+							Loaded 32574387 bytes.
+
+							Storing to device...
+
+							Stored 32571392 bytes.
+
+							Loading from server...
+
+							Loaded 32639923 bytes.
+
+							Storing to device...
+
+							Stored 32636928 bytes.
+
+							Loading from server...
+
+							Loaded 32705459 bytes.
+
+							Storing to device...
+
+							Stored 32702464 bytes.
+
+							Loading from server...
+
+							Loaded 32770995 bytes.
+
+							Storing to device...
+
+							Stored 32768000 bytes.
+
+							Loading from server...
+
+							Loaded 32836531 bytes.
+
+							Storing to device...
+
+							Stored 32833536 bytes.
+
+							Loading from server...
+
+							Loaded 32902067 bytes.
+
+							Storing to device...
+
+							Stored 32899072 bytes.
+
+							Loading from server...
+
+							Loaded 32967603 bytes.
+
+							Storing to device...
+
+							Stored 32964608 bytes.
+
+							Loading from server...
+
+							Loaded 33033139 bytes.
+
+							Storing to device...
+
+							Stored 33030144 bytes.
+
+							Loading from server...
+
+							Loaded 33098675 bytes.
+
+							Storing to device...
+
+							Stored 33095680 bytes.
+
+							Loading from server...
+
+							Loaded 33164211 bytes.
+
+							Storing to device...
+
+							Stored 33161216 bytes.
+
+							Loading from server...
+
+							Loaded 33229747 bytes.
+
+							Storing to device...
+
+							Stored 33226752 bytes.
+
+							Loading from server...
+
+							Loaded 33295283 bytes.
+
+							Storing to device...
+
+							Stored 33292288 bytes.
+
+							Loading from server...
+
+							Loaded 33360819 bytes.
+
+							Storing to device...
+
+							Stored 33357824 bytes.
+
+							Loading from server...
+
+							Loaded 33426355 bytes.
+
+							Storing to device...
+
+							Stored 33423360 bytes.
+
+							Loading from server...
+
+							Loaded 33491891 bytes.
+
+							Storing to device...
+
+							Stored 33488896 bytes.
+
+							Loading from server...
+
+							Loaded 33557427 bytes.
+
+							Storing to device...
+
+							Stored 33554432 bytes.
+
+							Loading from server...
+
+							Loaded 33622963 bytes.
+
+							Storing to device...
+
+							Stored 33619968 bytes.
+
+							Loading from server...
+
+							Loaded 33688499 bytes.
+
+							Storing to device...
+
+							Stored 33685504 bytes.
+
+							Loading from server...
+
+							Loaded 33754035 bytes.
+
+							Storing to device...
+
+							Stored 33751040 bytes.
+
+							Loading from server...
+
+							Loaded 33819571 bytes.
+
+							Storing to device...
+
+							Stored 33816576 bytes.
+
+							Loading from server...
+
+							Loaded 33885107 bytes.
+
+							Storing to device...
+
+							Stored 33882112 bytes.
+
+							Loading from server...
+
+							Loaded 33950643 bytes.
+
+							Storing to device...
+
+							Stored 33947648 bytes.
+
+							Loading from server...
+
+							Loaded 34016179 bytes.
+
+							Storing to device...
+
+							Stored 34013184 bytes.
+
+							Loading from server...
+
+							Loaded 34081715 bytes.
+
+							Storing to device...
+
+							Stored 34078720 bytes.
+
+							Loading from server...
+
+							Loaded 34147251 bytes.
+
+							Storing to device...
+
+							Stored 34144256 bytes.
+
+							Loading from server...
+
+							Loaded 34212787 bytes.
+
+							Storing to device...
+
+							Stored 34209792 bytes.
+
+							Loading from server...
+
+							Loaded 34278323 bytes.
+
+							Storing to device...
+
+							Stored 34275328 bytes.
+
+							Loading from server...
+
+							Loaded 34343859 bytes.
+
+							Storing to device...
+
+							Stored 34340864 bytes.
+
+							Loading from server...
+
+							Loaded 34409395 bytes.
+
+							Storing to device...
+
+							Stored 34406400 bytes.
+
+							Loading from server...
+
+							Loaded 34474931 bytes.
+
+							Storing to device...
+
+							Stored 34471936 bytes.
+
+							Loading from server...
+
+							Loaded 34540467 bytes.
+
+							Storing to device...
+
+							Stored 34537472 bytes.
+
+							Loading from server...
+
+							Loaded 34606003 bytes.
+
+							Storing to device...
+
+							Stored 34603008 bytes.
+
+							Loading from server...
+
+							Loaded 34671539 bytes.
+
+							Storing to device...
+
+							Stored 34668544 bytes.
+
+							Loading from server...
+
+							Loaded 34737075 bytes.
+
+							Storing to device...
+
+							Stored 34734080 bytes.
+
+							Loading from server...
+
+							Loaded 34802611 bytes.
+
+							Storing to device...
+
+							Stored 34799616 bytes.
+
+							Loading from server...
+
+							Loaded 34868147 bytes.
+
+							Storing to device...
+
+							Stored 34865152 bytes.
+
+							Loading from server...
+
+							Loaded 34933683 bytes.
+
+							Storing to device...
+
+							Stored 34930688 bytes.
+
+							Loading from server...
+
+							Loaded 34999219 bytes.
+
+							Storing to device...
+
+							Stored 34996224 bytes.
+
+							Loading from server...
+
+							Loaded 35064755 bytes.
+
+							Storing to device...
+
+							Stored 35061760 bytes.
+
+							Loading from server...
+
+							Loaded 35130291 bytes.
+
+							Storing to device...
+
+							Stored 35127296 bytes.
+
+							Loading from server...
+
+							Loaded 35195827 bytes.
+
+							Storing to device...
+
+							Stored 35192832 bytes.
+
+							Loading from server...
+
+							Loaded 35261363 bytes.
+
+							Storing to device...
+
+							Stored 35258368 bytes.
+
+							Loading from server...
+
+							Loaded 35326899 bytes.
+
+							Storing to device...
+
+							Stored 35323904 bytes.
+
+							Loading from server...
+
+							Loaded 35392435 bytes.
+
+							Storing to device...
+
+							Stored 35389440 bytes.
+
+							Loading from server...
+
+							Loaded 35457971 bytes.
+
+							Storing to device...
+
+							Stored 35454976 bytes.
+
+							Loading from server...
+
+							Loaded 35523507 bytes.
+
+							Storing to device...
+
+							Stored 35520512 bytes.
+
+							Loading from server...
+
+							Loaded 35589043 bytes.
+
+							Storing to device...
+
+							Stored 35586048 bytes.
+
+							Loading from server...
+
+							Loaded 35654579 bytes.
+
+							Storing to device...
+
+							Stored 35651584 bytes.
+
+							Loading from server...
+
+							Loaded 35720115 bytes.
+
+							Storing to device...
+
+							Stored 35717120 bytes.
+
+							Loading from server...
+
+							Loaded 35785651 bytes.
+
+							Storing to device...
+
+							Stored 35782656 bytes.
+
+							Loading from server...
+
+							Loaded 35851187 bytes.
+
+							Storing to device...
+
+							Stored 35848192 bytes.
+
+							Loading from server...
+
+							Loaded 35916723 bytes.
+
+							Storing to device...
+
+							Stored 35913728 bytes.
+
+							Loading from server...
+
+							Loaded 35982259 bytes.
+
+							Storing to device...
+
+							Stored 35979264 bytes.
+
+							Loading from server...
+
+							Loaded 36047795 bytes.
+
+							Storing to device...
+
+							Stored 36044800 bytes.
+
+							Loading from server...
+
+							Loaded 36113331 bytes.
+
+							Storing to device...
+
+							Stored 36110336 bytes.
+
+							Loading from server...
+
+							Loaded 36178867 bytes.
+
+							Storing to device...
+
+							Stored 36175872 bytes.
+
+							Loading from server...
+
+							Loaded 36244403 bytes.
+
+							Storing to device...
+
+							Stored 36241408 bytes.
+
+							Loading from server...
+
+							Loaded 36309939 bytes.
+
+							Storing to device...
+
+							Stored 36306944 bytes.
+
+							Loading from server...
+
+							Loaded 36375475 bytes.
+
+							Storing to device...
+
+							Stored 36372480 bytes.
+
+							Loading from server...
+
+							Loaded 36441011 bytes.
+
+							Storing to device...
+
+							Stored 36438016 bytes.
+
+							Loading from server...
+
+							Loaded 36506547 bytes.
+
+							Storing to device...
+
+							Stored 36503552 bytes.
+
+							Loading from server...
+
+							Loaded 36572083 bytes.
+
+							Storing to device...
+
+							Stored 36569088 bytes.
+
+							Loading from server...
+
+							Loaded 36637619 bytes.
+
+							Storing to device...
+
+							Stored 36634624 bytes.
+
+							Loading from server...
+
+							Loaded 36703155 bytes.
+
+							Storing to device...
+
+							Stored 36700160 bytes.
+
+							Loading from server...
+
+							Loaded 36768691 bytes.
+
+							Storing to device...
+
+							Stored 36765696 bytes.
+
+							Loading from server...
+
+							Loaded 36834227 bytes.
+
+							Storing to device...
+
+							Stored 36831232 bytes.
+
+							Loading from server...
+
+							Loaded 36899763 bytes.
+
+							Storing to device...
+
+							Stored 36896768 bytes.
+
+							Loading from server...
+
+							Loaded 36965299 bytes.
+
+							Storing to device...
+
+							Stored 36962304 bytes.
+
+							Loading from server...
+
+							Loaded 37030835 bytes.
+
+							Storing to device...
+
+							Stored 37027840 bytes.
+
+							Loading from server...
+
+							Loaded 37096371 bytes.
+
+							Storing to device...
+
+							Stored 37093376 bytes.
+
+							Loading from server...
+
+							Loaded 37161907 bytes.
+
+							Storing to device...
+
+							Stored 37158912 bytes.
+
+							Loading from server...
+
+							Loaded 37227443 bytes.
+
+							Storing to device...
+
+							Stored 37224448 bytes.
+
+							Loading from server...
+
+							Loaded 37292979 bytes.
+
+							Storing to device...
+
+							Stored 37289984 bytes.
+
+							Loading from server...
+
+							Loaded 37358515 bytes.
+
+							Storing to device...
+
+							Stored 37355520 bytes.
+
+							Loading from server...
+
+							Loaded 37424051 bytes.
+
+							Storing to device...
+
+							Stored 37421056 bytes.
+
+							Loading from server...
+
+							Loaded 37489587 bytes.
+
+							Storing to device...
+
+							Stored 37486592 bytes.
+
+							Loading from server...
+
+							Loaded 37555123 bytes.
+
+							Storing to device...
+
+							Stored 37552128 bytes.
+
+							Loading from server...
+
+							Loaded 37620659 bytes.
+
+							Storing to device...
+
+							Stored 37617664 bytes.
+
+							Loading from server...
+
+							Loaded 37686195 bytes.
+
+							Storing to device...
+
+							Stored 37683200 bytes.
+
+							Loading from server...
+
+							Loaded 37751731 bytes.
+
+							Storing to device...
+
+							Stored 37748736 bytes.
+
+							Loading from server...
+
+							Loaded 37817267 bytes.
+
+							Storing to device...
+
+							Stored 37814272 bytes.
+
+							Loading from server...
+
+							Loaded 37882803 bytes.
+
+							Storing to device...
+
+							Stored 37879808 bytes.
+
+							Loading from server...
+
+							Loaded 37948339 bytes.
+
+							Storing to device...
+
+							Stored 37945344 bytes.
+
+							Loading from server...
+
+							Loaded 38013875 bytes.
+
+							Storing to device...
+
+							Stored 38010880 bytes.
+
+							Loading from server...
+
+							Loaded 38079411 bytes.
+
+							Storing to device...
+
+							Stored 38076416 bytes.
+
+							Loading from server...
+
+							Loaded 38144947 bytes.
+
+							Storing to device...
+
+							Stored 38141952 bytes.
+
+							Loading from server...
+
+							Loaded 38210483 bytes.
+
+							Storing to device...
+
+							Stored 38207488 bytes.
+
+							Loading from server...
+
+							Loaded 38276019 bytes.
+
+							Storing to device...
+
+							Stored 38273024 bytes.
+
+							Loading from server...
+
+							Loaded 38341555 bytes.
+
+							Storing to device...
+
+							Stored 38338560 bytes.
+
+							Loading from server...
+
+							Loaded 38407091 bytes.
+
+							Storing to device...
+
+							Stored 38404096 bytes.
+
+							Loading from server...
+
+							Loaded 38472627 bytes.
+
+							Storing to device...
+
+							Stored 38469632 bytes.
+
+							Loading from server...
+
+							Loaded 38538163 bytes.
+
+							Storing to device...
+
+							Stored 38535168 bytes.
+
+							Loading from server...
+
+							Loaded 38603699 bytes.
+
+							Storing to device...
+
+							Stored 38600704 bytes.
+
+							Loading from server...
+
+							Loaded 38669235 bytes.
+
+							Storing to device...
+
+							Stored 38666240 bytes.
+
+							Loading from server...
+
+							Loaded 38734771 bytes.
+
+							Storing to device...
+
+							Stored 38731776 bytes.
+
+							Loading from server...
+
+							Loaded 38800307 bytes.
+
+							Storing to device...
+
+							Stored 38797312 bytes.
+
+							Loading from server...
+
+							Loaded 38865843 bytes.
+
+							Storing to device...
+
+							Stored 38862848 bytes.
+
+							Loading from server...
+
+							Loaded 38931379 bytes.
+
+							Storing to device...
+
+							Stored 38928384 bytes.
+
+							Loading from server...
+
+							Loaded 38996915 bytes.
+
+							Storing to device...
+
+							Stored 38993920 bytes.
+
+							Loading from server...
+
+							Loaded 39062451 bytes.
+
+							Storing to device...
+
+							Stored 39059456 bytes.
+
+							Loading from server...
+
+							Loaded 39127987 bytes.
+
+							Storing to device...
+
+							Stored 39124992 bytes.
+
+							Loading from server...
+
+							Loaded 39193523 bytes.
+
+							Storing to device...
+
+							Stored 39190528 bytes.
+
+							Loading from server...
+
+							Loaded 39259059 bytes.
+
+							Storing to device...
+
+							Stored 39256064 bytes.
+
+							Loading from server...
+
+							Loaded 39324595 bytes.
+
+							Storing to device...
+
+							Stored 39321600 bytes.
+
+							Loading from server...
+
+							Loaded 39390131 bytes.
+
+							Storing to device...
+
+							Stored 39387136 bytes.
+
+							Loading from server...
+
+							Loaded 39455667 bytes.
+
+							Storing to device...
+
+							Stored 39452672 bytes.
+
+							Loading from server...
+
+							Loaded 39521203 bytes.
+
+							Storing to device...
+
+							Stored 39518208 bytes.
+
+							Loading from server...
+
+							Loaded 39586739 bytes.
+
+							Storing to device...
+
+							Stored 39583744 bytes.
+
+							Loading from server...
+
+							Loaded 39652275 bytes.
+
+							Storing to device...
+
+							Stored 39649280 bytes.
+
+							Loading from server...
+
+							Loaded 39717811 bytes.
+
+							Storing to device...
+
+							Stored 39714816 bytes.
+
+							Loading from server...
+
+							Loaded 39783347 bytes.
+
+							Storing to device...
+
+							Stored 39780352 bytes.
+
+							Loading from server...
+
+							Loaded 39848883 bytes.
+
+							Storing to device...
+
+							Stored 39845888 bytes.
+
+							Loading from server...
+
+							Loaded 39914419 bytes.
+
+							Storing to device...
+
+							Stored 39911424 bytes.
+
+							Loading from server...
+
+							Loaded 39979955 bytes.
+
+							Storing to device...
+
+							Stored 39976960 bytes.
+
+							Loading from server...
+
+							Loaded 40045491 bytes.
+
+							Storing to device...
+
+							Stored 40042496 bytes.
+
+							Loading from server...
+
+							Loaded 40111027 bytes.
+
+							Storing to device...
+
+							Stored 40108032 bytes.
+
+							Loading from server...
+
+							Loaded 40176563 bytes.
+
+							Storing to device...
+
+							Stored 40173568 bytes.
+
+							Loading from server...
+
+							Loaded 40242099 bytes.
+
+							Storing to device...
+
+							Stored 40239104 bytes.
+
+							Loading from server...
+
+							Loaded 40307635 bytes.
+
+							Storing to device...
+
+							Stored 40304640 bytes.
+
+							Loading from server...
+
+							Loaded 40373171 bytes.
+
+							Storing to device...
+
+							Stored 40370176 bytes.
+
+							Loading from server...
+
+							Loaded 40438707 bytes.
+
+							Storing to device...
+
+							Stored 40435712 bytes.
+
+							Loading from server...
+
+							Loaded 40504243 bytes.
+
+							Storing to device...
+
+							Stored 40501248 bytes.
+
+							Loading from server...
+
+							Loaded 40569779 bytes.
+
+							Storing to device...
+
+							Stored 40566784 bytes.
+
+							Loading from server...
+
+							Loaded 40635315 bytes.
+
+							Storing to device...
+
+							Stored 40632320 bytes.
+
+							Loading from server...
+
+							Loaded 40700851 bytes.
+
+							Storing to device...
+
+							Stored 40697856 bytes.
+
+							Loading from server...
+
+							Loaded 40766387 bytes.
+
+							Storing to device...
+
+							Stored 40763392 bytes.
+
+							Loading from server...
+
+							Loaded 40831923 bytes.
+
+							Storing to device...
+
+							Stored 40828928 bytes.
+
+							Loading from server...
+
+							Loaded 40897459 bytes.
+
+							Storing to device...
+
+							Stored 40894464 bytes.
+
+							Loading from server...
+
+							Loaded 40962995 bytes.
+
+							Storing to device...
+
+							Stored 40960000 bytes.
+
+							Loading from server...
+
+							Loaded 41028531 bytes.
+
+							Storing to device...
+
+							Stored 41025536 bytes.
+
+							Loading from server...
+
+							Loaded 41094067 bytes.
+
+							Storing to device...
+
+							Stored 41091072 bytes.
+
+							Loading from server...
+
+							Loaded 41159603 bytes.
+
+							Storing to device...
+
+							Stored 41156608 bytes.
+
+							Loading from server...
+
+							Loaded 41225139 bytes.
+
+							Storing to device...
+
+							Stored 41222144 bytes.
+
+							Loading from server...
+
+							Loaded 41290675 bytes.
+
+							Storing to device...
+
+							Stored 41287680 bytes.
+
+							Loading from server...
+
+							Loaded 41356211 bytes.
+
+							Storing to device...
+
+							Stored 41353216 bytes.
+
+							Loading from server...
+
+							Loaded 41421747 bytes.
+
+							Storing to device...
+
+							Stored 41418752 bytes.
+
+							Loading from server...
+
+							Loaded 41487283 bytes.
+
+							Storing to device...
+
+							Stored 41484288 bytes.
+
+							Loading from server...
+
+							Loaded 41552819 bytes.
+
+							Storing to device...
+
+							Stored 41549824 bytes.
+
+							Loading from server...
+
+							Loaded 41618355 bytes.
+
+							Storing to device...
+
+							Stored 41615360 bytes.
+
+							Loading from server...
+
+							Loaded 41683891 bytes.
+
+							Storing to device...
+
+							Stored 41680896 bytes.
+
+							Loading from server...
+
+							Loaded 41749427 bytes.
+
+							Storing to device...
+
+							Stored 41746432 bytes.
+
+							Loading from server...
+
+							Loaded 41814963 bytes.
+
+							Storing to device...
+
+							Stored 41811968 bytes.
+
+							Loading from server...
+
+							Loaded 41880499 bytes.
+
+							Storing to device...
+
+							Stored 41877504 bytes.
+
+							Loading from server...
+
+							Loaded 41946035 bytes.
+
+							Storing to device...
+
+							Stored 41943040 bytes.
+
+							Loading from server...
+
+							Loaded 42011571 bytes.
+
+							Storing to device...
+
+							Stored 42008576 bytes.
+
+							Loading from server...
+
+							Loaded 42077107 bytes.
+
+							Storing to device...
+
+							Stored 42074112 bytes.
+
+							Loading from server...
+
+							Loaded 42142643 bytes.
+
+							Storing to device...
+
+							Stored 42139648 bytes.
+
+							Loading from server...
+
+							Loaded 42208179 bytes.
+
+							Storing to device...
+
+							Stored 42205184 bytes.
+
+							Loading from server...
+
+							Loaded 42273715 bytes.
+
+							Storing to device...
+
+							Stored 42270720 bytes.
+
+							Loading from server...
+
+							Loaded 42339251 bytes.
+
+							Storing to device...
+
+							Stored 42336256 bytes.
+
+							Loading from server...
+
+							Loaded 42404787 bytes.
+
+							Storing to device...
+
+							Stored 42401792 bytes.
+
+							Loading from server...
+
+							Loaded 42470323 bytes.
+
+							Storing to device...
+
+							Stored 42467328 bytes.
+
+							Loading from server...
+
+							Loaded 42535859 bytes.
+
+							Storing to device...
+
+							Stored 42532864 bytes.
+
+							Loading from server...
+
+							Loaded 42601395 bytes.
+
+							Storing to device...
+
+							Stored 42598400 bytes.
+
+							Loading from server...
+
+							Loaded 42666931 bytes.
+
+							Storing to device...
+
+							Stored 42663936 bytes.
+
+							Loading from server...
+
+							Loaded 42732467 bytes.
+
+							Storing to device...
+
+							Stored 42729472 bytes.
+
+							Loading from server...
+
+							Loaded 42798003 bytes.
+
+							Storing to device...
+
+							Stored 42795008 bytes.
+
+							Loading from server...
+
+							Loaded 42863539 bytes.
+
+							Storing to device...
+
+							Stored 42860544 bytes.
+
+							Loading from server...
+
+							Loaded 42929075 bytes.
+
+							Storing to device...
+
+							Stored 42926080 bytes.
+
+							Loading from server...
+
+							Loaded 42994611 bytes.
+
+							Storing to device...
+
+							Stored 42991616 bytes.
+
+							Loading from server...
+
+							Loaded 43060147 bytes.
+
+							Storing to device...
+
+							Stored 43057152 bytes.
+
+							Loading from server...
+
+							Loaded 43125683 bytes.
+
+							Storing to device...
+
+							Stored 43122688 bytes.
+
+							Loading from server...
+
+							Loaded 43191219 bytes.
+
+							Storing to device...
+
+							Stored 43188224 bytes.
+
+							Loading from server...
+
+							Loaded 43256755 bytes.
+
+							Storing to device...
+
+							Stored 43253760 bytes.
+
+							Loading from server...
+
+							Loaded 43322291 bytes.
+
+							Storing to device...
+
+							Stored 43319296 bytes.
+
+							Loading from server...
+
+							Loaded 43387827 bytes.
+
+							Storing to device...
+
+							Stored 43384832 bytes.
+
+							Loading from server...
+
+							Loaded 43453363 bytes.
+Image parsing complete.
+
+							Storing to device...
+
+CM> 
+							Stored 43450368 bytes.
+
+							Loading from server...
+
+							Loaded 43518899 bytes.
+Image index = 8 Image to open = 8
+   Signature: 3390
+     Control: 0000
+   Major Rev: 0000
+   Minor Rev: 0000
+ File Length: 10659 bytes
+Load Address: 00000000
+    Filename: openwrt-bcm3390-DoR-kaon-cg3000tc.dtb.3390
+         HCS: 0f38
+         CRC: 7929e848
+
+ProgramStoreDeviceDriverRemoteFlash::ProgramStoreDriverIsHeaderValid: Allowing alternate image signature 3390
+!ProgramStore header was verified.  Image can be downloaded.
+Image parsing complete.
+
+							Storing to device...
+
+CM> 
+							Stored 43515904 bytes.
+
+							Loading from server...
+
+							Loaded 43584435 bytes.
+Image index = 10 Image to open = 10
+   Signature: 3390
+     Control: 0000
+   Major Rev: 0000
+   Minor Rev: 0000
+ File Length: 3502724 bytes
+Load Address: 00000000
+    Filename: kernel_v1.00.67.3390
+         HCS: 6d5e
+         CRC: f8d380d7
+
+ProgramStoreDeviceDriverRemoteFlash::ProgramStoreDriverIsHeaderValid: Allowing alternate image signature 3390
+!ProgramStore header was verified.  Image can be downloaded.
+
+							Storing to device...
+
+CM> 
+							Stored 43581440 bytes.
+
+							Loading from server...
+
+							Loaded 43649971 bytes.
+
+							Storing to device...
+
+							Stored 43646976 bytes.
+
+							Loading from server...
+
+							Loaded 43715507 bytes.
+
+							Storing to device...
+
+							Stored 43712512 bytes.
+
+							Loading from server...
+
+							Loaded 43781043 bytes.
+
+							Storing to device...
+
+							Stored 43778048 bytes.
+
+							Loading from server...
+
+							Loaded 43846579 bytes.
+
+							Storing to device...
+
+							Stored 43843584 bytes.
+
+							Loading from server...
+
+							Loaded 43912115 bytes.
+
+							Storing to device...
+
+							Stored 43909120 bytes.
+
+							Loading from server...
+
+							Loaded 43977651 bytes.
+
+							Storing to device...
+
+							Stored 43974656 bytes.
+
+							Loading from server...
+
+							Loaded 44043187 bytes.
+
+							Storing to device...
+
+							Stored 44040192 bytes.
+
+							Loading from server...
+
+							Loaded 44108723 bytes.
+
+							Storing to device...
+
+							Stored 44105728 bytes.
+
+							Loading from server...
+
+							Loaded 44174259 bytes.
+
+							Storing to device...
+
+							Stored 44171264 bytes.
+
+							Loading from server...
+
+							Loaded 44239795 bytes.
+
+							Storing to device...
+
+							Stored 44236800 bytes.
+
+							Loading from server...
+
+							Loaded 44305331 bytes.
+
+							Storing to device...
+
+							Stored 44302336 bytes.
+
+							Loading from server...
+
+							Loaded 44370867 bytes.
+
+							Storing to device...
+
+							Stored 44367872 bytes.
+
+							Loading from server...
+
+							Loaded 44436403 bytes.
+
+							Storing to device...
+
+							Stored 44433408 bytes.
+
+							Loading from server...
+
+							Loaded 44501939 bytes.
+
+							Storing to device...
+
+							Stored 44498944 bytes.
+
+							Loading from server...
+
+							Loaded 44567475 bytes.
+
+							Storing to device...
+
+							Stored 44564480 bytes.
+
+							Loading from server...
+
+							Loaded 44633011 bytes.
+
+							Storing to device...
+
+							Stored 44630016 bytes.
+
+							Loading from server...
+
+							Loaded 44698547 bytes.
+
+							Storing to device...
+
+							Stored 44695552 bytes.
+
+							Loading from server...
+
+							Loaded 44764083 bytes.
+
+							Storing to device...
+
+							Stored 44761088 bytes.
+
+							Loading from server...
+
+							Loaded 44829619 bytes.
+
+							Storing to device...
+
+							Stored 44826624 bytes.
+
+							Loading from server...
+
+							Loaded 44895155 bytes.
+
+							Storing to device...
+
+							Stored 44892160 bytes.
+
+							Loading from server...
+
+							Loaded 44960691 bytes.
+
+							Storing to device...
+
+							Stored 44957696 bytes.
+
+							Loading from server...
+
+							Loaded 45026227 bytes.
+
+							Storing to device...
+
+							Stored 45023232 bytes.
+
+							Loading from server...
+
+							Loaded 45091763 bytes.
+
+							Storing to device...
+
+							Stored 45088768 bytes.
+
+							Loading from server...
+
+							Loaded 45157299 bytes.
+
+							Storing to device...
+
+							Stored 45154304 bytes.
+
+							Loading from server...
+
+							Loaded 45222835 bytes.
+
+							Storing to device...
+
+							Stored 45219840 bytes.
+
+							Loading from server...
+
+							Loaded 45288371 bytes.
+
+							Storing to device...
+
+							Stored 45285376 bytes.
+
+							Loading from server...
+
+							Loaded 45353907 bytes.
+
+							Storing to device...
+
+							Stored 45350912 bytes.
+
+							Loading from server...
+
+							Loaded 45419443 bytes.
+
+							Storing to device...
+
+							Stored 45416448 bytes.
+
+							Loading from server...
+
+							Loaded 45484979 bytes.
+
+							Storing to device...
+
+							Stored 45481984 bytes.
+
+							Loading from server...
+
+							Loaded 45550515 bytes.
+
+							Storing to device...
+
+							Stored 45547520 bytes.
+
+							Loading from server...
+
+							Loaded 45616051 bytes.
+
+							Storing to device...
+
+							Stored 45613056 bytes.
+
+							Loading from server...
+
+							Loaded 45681587 bytes.
+
+							Storing to device...
+
+							Stored 45678592 bytes.
+
+							Loading from server...
+
+							Loaded 45747123 bytes.
+
+							Storing to device...
+
+							Stored 45744128 bytes.
+
+							Loading from server...
+
+							Loaded 45812659 bytes.
+
+							Storing to device...
+
+							Stored 45809664 bytes.
+
+							Loading from server...
+
+							Loaded 45878195 bytes.
+
+							Storing to device...
+
+							Stored 45875200 bytes.
+
+							Loading from server...
+
+							Loaded 45943731 bytes.
+
+							Storing to device...
+
+							Stored 45940736 bytes.
+
+							Loading from server...
+
+							Loaded 46009267 bytes.
+
+							Storing to device...
+
+							Stored 46006272 bytes.
+
+							Loading from server...
+
+							Loaded 46074803 bytes.
+
+							Storing to device...
+
+							Stored 46071808 bytes.
+
+							Loading from server...
+
+							Loaded 46140339 bytes.
+
+							Storing to device...
+
+							Stored 46137344 bytes.
+
+							Loading from server...
+
+							Loaded 46205875 bytes.
+
+							Storing to device...
+
+							Stored 46202880 bytes.
+
+							Loading from server...
+
+							Loaded 46271411 bytes.
+
+							Storing to device...
+
+							Stored 46268416 bytes.
+
+							Loading from server...
+
+							Loaded 46336947 bytes.
+
+							Storing to device...
+
+							Stored 46333952 bytes.
+
+							Loading from server...
+
+							Loaded 46402483 bytes.
+
+							Storing to device...
+
+							Stored 46399488 bytes.
+
+							Loading from server...
+
+							Loaded 46468019 bytes.
+
+							Storing to device...
+
+							Stored 46465024 bytes.
+
+							Loading from server...
+
+							Loaded 46533555 bytes.
+
+							Storing to device...
+
+							Stored 46530560 bytes.
+
+							Loading from server...
+
+							Loaded 46599091 bytes.
+
+							Storing to device...
+
+							Stored 46596096 bytes.
+
+							Loading from server...
+
+							Loaded 46664627 bytes.
+
+							Storing to device...
+
+							Stored 46661632 bytes.
+
+							Loading from server...
+
+							Loaded 46730163 bytes.
+
+							Storing to device...
+
+							Stored 46727168 bytes.
+
+							Loading from server...
+
+							Loaded 46795699 bytes.
+
+							Storing to device...
+
+							Stored 46792704 bytes.
+
+							Loading from server...
+
+							Loaded 46861235 bytes.
+
+							Storing to device...
+
+							Stored 46858240 bytes.
+
+							Loading from server...
+
+							Loaded 46926771 bytes.
+
+							Storing to device...
+
+							Stored 46923776 bytes.
+
+							Loading from server...
+
+							Loaded 46992307 bytes.
+
+							Storing to device...
+
+							Stored 46989312 bytes.
+
+							Loading from server...
+Successfully downloaded 47057843 bytes
+
+							Loaded 47057843 bytes.
+[13:09:32 01/23/2026] [CmDocsisIpThread] BcmBfcCmD31SecureDownload::ShaDigestCodeImage:  
+(D31 Secure Software Download) Code image SHA256 DIGEST= 
+  ce e0 47 e7   09 fd 81 a1   4c b2 7e f5   84 67 23 7e  | ..G.....L.~..g#~
+  c4 c8 47 fa   f4 4f 21 f5   d5 34 b7 d5   03 32 75 75  | ..G..O!..4...2uu
+
+[13:09:32 01/23/2026] [CmDocsisIpThread] BcmBfcCmD31SecureDownload::ShaDigestCodeImage:  
+(D31 Secure Software Download) Manufacturer Message DIGEST= 
+  ce e0 47 e7   09 fd 81 a1   4c b2 7e f5   84 67 23 7e  | ..G.....L.~..g#~
+  c4 c8 47 fa   f4 4f 21 f5   d5 34 b7 d5   03 32 75 75  | ..G..O!..4...2uu
+
+
+							Storing to device...
+
+CM> 
+							Stored 47054848 bytes.
+
+Computing CRC32 over the image to ensure that it is valid...
+
+CM> Software image was successfully stored!
+Logging event: SW download Successful - Via NMS
+pfMfgSignerInfo = 0x828d6b9c
+pfMfgCvcChain = 0x83bbf5ec
+Non-Vol D3.1 BPI Settings successfully written to the device.
+SW dload complete, writing NV prior to finalizing image.
+NV write success.
+
+CM>  
